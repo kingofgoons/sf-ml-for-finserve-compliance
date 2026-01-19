@@ -88,11 +88,13 @@ This hands-on lab walks through building an intelligent email compliance system 
 
 **Goal:** Register and version email classification models.
 
-- Train a simple compliance classifier (scikit-learn or XGBoost)
+- Train a simple compliance classifier (XGBoost via Snowpark ML)
 - Register model in Snowflake Model Registry
-- Deploy model as a UDF for inference
+- Deploy model for inference
+- **Upload custom Hugging Face embedding models** to Snowflake stages
+- Create UDFs that use custom models
 
-**Key Snowflake features:** Model Registry, Custom UDFs
+**Key Snowflake features:** Model Registry, Custom UDFs, Stage-based model deployment
 
 ---
 
@@ -102,13 +104,14 @@ This hands-on lab walks through building an intelligent email compliance system 
 
 ### Step 2.1 — Email Surveillance Model Benchmarking
 
-**Goal:** Compare keyword-based vs ML-based detection approaches.
+**Goal:** Compare detection approaches and model performance.
 
-- Run both approaches on test dataset
-- Compare precision, recall, false positive rates
-- Visualize investigation efficiency gains
+- Keyword-based rules vs ML-based detection
+- **Snowflake in-house models vs frontier models** (mistral-7b vs mistral-large2)
+- Compare precision, recall, false positive rates, and cost
+- Model selection guide for different use cases
 
-**Key Snowflake features:** Cortex Playground, model evaluation
+**Key Snowflake features:** Cortex LLM functions, model evaluation
 
 ### Step 2.2 — LLM-to-Email Compliance Integration
 
@@ -116,9 +119,11 @@ This hands-on lab walks through building an intelligent email compliance system 
 
 - Use `AI_CLASSIFY` for email categorization
 - Use `AI_COMPLETE` for extracting structured compliance signals
-- Build end-to-end scoring pipeline
+- **Parse LLM JSON output → feed as parameters to Snowpark Python UDFs**
+- Build end-to-end pipeline: LLM extraction → Python business logic → actions
+- Ensemble approaches (ML + LLM)
 
-**Key Snowflake features:** AI_CLASSIFY, AI_COMPLETE, Cortex LLM functions
+**Key Snowflake features:** AI_CLASSIFY, AI_COMPLETE, PARSE_JSON, Snowpark UDFs
 
 ### Step 2.3 — Fine-Tuning for Financial Communication Language
 
