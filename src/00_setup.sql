@@ -113,6 +113,30 @@ CREATE OR REPLACE STAGE EMAIL_DATA_STAGE
     )
     COMMENT = 'Stage for loading synthetic email CSV data';
 
+/*
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    UPLOADING DATA TO THE STAGE                              │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  OPTION 1: Snowsight UI (recommended)                                       │
+│  ─────────────────────────────────────────────────────────────────────────  │
+│  1. Go to Data → Databases → ML_COMPLIANCE_DEMO → RAW_DATA → Stages         │
+│  2. Click on EMAIL_DATA_STAGE                                               │
+│  3. Click "+ Files" button                                                  │
+│  4. Upload emails_synthetic.csv from the data/ folder                       │
+│                                                                             │
+│  OPTION 2: SnowSQL CLI                                                      │
+│  ─────────────────────────────────────────────────────────────────────────  │
+│  PUT file:///path/to/data/emails_synthetic.csv                              │
+│      @ML_COMPLIANCE_DEMO.RAW_DATA.EMAIL_DATA_STAGE                          │
+│      AUTO_COMPRESS=FALSE;                                                   │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+*/
+
+-- Verify files are uploaded (run after upload)
+-- LIST @EMAIL_DATA_STAGE;
+
 -- ----------------------------------------------------------------------------
 -- 6. ML SCHEMA OBJECTS
 -- ----------------------------------------------------------------------------

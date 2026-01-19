@@ -26,12 +26,13 @@ This hands-on lab walks through building an intelligent email compliance system 
   - Snowpark-enabled warehouse
   - Cortex LLM functions enabled
   - `ACCOUNTADMIN` access (for initial setup only)
-- Python 3.9+
 
 **Snowflake objects created:**
 - Database: `ML_COMPLIANCE_DEMO`
 - Warehouse: `ML_COMPLIANCE_WH`
 - Role: `ML_COMPLIANCE_RL`
+
+**All code runs inside Snowsight** (SQL Worksheets, Python Worksheets, or Notebooks).
 
 ---
 
@@ -170,20 +171,32 @@ This hands-on lab walks through building an intelligent email compliance system 
 
 ## Quick Start
 
+All code runs inside **Snowsight** — no local Python environment needed.
+
+### 1. Generate synthetic data (one-time, locally)
 ```bash
-# 1. Set up Snowflake objects
-snowsql -f src/00_setup.sql
-
-# 2. Generate synthetic data (if not present)
 python scripts/generate_data.py
-
-# 3. Walk through each step in order
-python src/01_snowpark_email_processing.py
-# ... continue through 08
-
-# 4. Reset environment for next demo
-snowsql -f src/99_reset.sql
 ```
+
+### 2. Run setup in Snowsight
+1. Open **Snowsight** → **Worksheets** → **+ SQL Worksheet**
+2. Copy/paste contents of `src/00_setup.sql`
+3. Run all statements
+
+### 3. Upload sample data
+1. Navigate to **Data → Databases → ML_COMPLIANCE_DEMO → RAW_DATA → Stages**
+2. Click on `EMAIL_DATA_STAGE` → **+ Files**
+3. Upload `data/emails_synthetic.csv`
+
+### 4. Walk through each step
+For each `.py` file in `src/`:
+1. Create a **Python Worksheet** or **Notebook** in Snowsight
+2. Copy/paste the file contents
+3. Set context: Database=`ML_COMPLIANCE_DEMO`, Warehouse=`ML_COMPLIANCE_WH`, Role=`ML_COMPLIANCE_RL`
+4. Run cells in order
+
+### 5. Reset for next demo
+Run `src/99_reset.sql` in a SQL Worksheet.
 
 ---
 
