@@ -25,10 +25,9 @@ snowflake_credentials.json
 .DS_Store
 Thumbs.db
 
-# Data artifacts
+# Data artifacts (generated files - run scripts/generate_data.py locally)
 *.parquet
 *.csv
-!data/*.csv
 
 # Jupyter
 .ipynb_checkpoints/
