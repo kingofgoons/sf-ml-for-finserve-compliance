@@ -1,0 +1,730 @@
+email_id,sender,recipient,cc,subject,body,sent_at,sender_dept,recipient_dept,compliance_label
+86d4e1e4-f6f8-4d6e-8dd9-ee1c7c783aae,a.bell@acmefund.com,j.morrison@acmefund.com,,Monthly risk report - draft for review,"Hi James,
+
+Attached is the draft monthly risk report. Please review and send any comments by EOD Wednesday.
+
+Thanks,
+Andrew",2025-10-21T10:07:00,Client Relations,Trading,CLEAN
+a7aea00c-95e0-4c71-8339-7cb0cac19ce6,a.foster@acmefund.com,s.chen@acmefund.com,,Monthly risk report - draft for review,"Hi Sarah,
+
+Attached is the draft monthly risk report. Please review and send any comments by EOD Wednesday.
+
+Thanks,
+Amanda",2025-10-21T12:09:00,Portfolio Management,Research,CLEAN
+e662925e-6989-4b17-a55d-a5137bb563c9,j.morrison@acmefund.com,e.volkov@acmefund.com,,Welcome aboard!,"Hi Elena,
+
+Welcome to the team! I've set up your onboarding meetings for next week. Please reach out if you have any questions.
+
+Best,
+James",2025-10-21T12:18:00,Trading,Trading,CLEAN
+110f74c9-a5ca-454f-9275-1fa04b1fd358,d.park@acmefund.com,a.bell@acmefund.com,,Quick trade question,"Andrew,
+
+Thinking of buying some puts on a stock we're long in the fund. Just in my personal account though. Should be fine right? Don't want to bother with pre-clearance.
+
+David",2025-10-22T15:55:00,Trading,Client Relations,PERSONAL_TRADING
+c61ad244-5b62-4e10-970e-ea1350e9f189,s.chen@acmefund.com,m.webb@acmefund.com,,Welcome aboard!,"Hi Marcus,
+
+Welcome to the team! I've set up your onboarding meetings for next week. Please reach out if you have any questions.
+
+Best,
+Sarah",2025-10-23T11:49:00,Research,Research,CLEAN
+79764369-a57b-479e-b68c-bd509d6206b0,a.foster@acmefund.com,s.chen@acmefund.com,,System maintenance notification,"Team,
+
+IT has scheduled system maintenance for Saturday 2am-6am. Trading systems will be unavailable during this window.
+
+Please plan accordingly.
+Amanda",2025-10-23T21:27:00,Portfolio Management,Research,CLEAN
+6d83bb3a-f81d-4799-917e-901a7b89a1c6,p.sharma@acmefund.com,k.obrien@acmefund.com,,URGENT - Acme Corp news coming,"Hey,
+
+Heads up - I heard from my contact at Acme that they're announcing a major acquisition tomorrow morning. This isn't public yet. Might want to adjust positions before the announcement.
+
+Keep this between us.
+Priya",2025-10-24T07:02:00,Research,Operations,INSIDER_TRADING
+c9ee3887-4dd9-4bdc-93fa-97b4c6742e34,a.foster@acmefund.com,a.bell@acmefund.com,,Weekly team sync notes,"Hi all,
+
+Attached are the notes from today's sync. Action items highlighted in yellow.
+
+Thanks,
+Amanda",2025-10-24T08:52:00,Portfolio Management,Client Relations,CLEAN
+780ef32b-b9a1-4e6a-81b0-559b971bd860,r.kim@acmefund.com,a.foster@acmefund.com,j.morrison@acmefund.com,RE: Vacation request,"Approved. Enjoy your time off!
+
+Rachel",2025-10-24T12:36:00,Client Relations,Portfolio Management,CLEAN
+abba9d10-9ae5-4401-9892-431576f2220a,t.grant@acmefund.com,r.kim@acmefund.com,,System maintenance notification,"Team,
+
+IT has scheduled system maintenance for Saturday 2am-6am. Trading systems will be unavailable during this window.
+
+Please plan accordingly.
+Thomas",2025-10-24T15:07:00,Legal,Client Relations,CLEAN
+81e80ffb-d325-437a-a1ec-f8b1bd2442cc,d.park@acmefund.com,t.grant@acmefund.com,,Welcome aboard!,"Hi Thomas,
+
+Welcome to the team! I've set up your onboarding meetings for next week. Please reach out if you have any questions.
+
+Best,
+David",2025-10-24T16:20:00,Trading,Legal,CLEAN
+e1256eed-9005-4f25-9016-c326dd947fc9,s.chen@acmefund.com,d.park@acmefund.com,,RE: After hours trading,"Yeah I've been day trading in my Schwab account. Made $20k last month! Haven't reported it yet since it's small amounts. Compliance doesn't need to know everything.
+
+Sarah",2025-10-24T18:27:00,Research,Trading,PERSONAL_TRADING
+51d28d31-ffd0-4d9f-82f8-8320987c3fe8,r.hayes@acmefund.com,j.liu@acmefund.com,,RE: Hedge fund strategies,"Here's our fund's full trading strategy doc. I know you're at a competitor now but this might help you. Delete after reading.
+
+Robert",2025-10-25T10:16:00,Compliance,Compliance,CONFIDENTIALITY_BREACH
+4bbb9f42-6576-44a6-bf50-1aa4ab9598d2,j.morrison@acmefund.com,d.park@acmefund.com,a.bell@acmefund.com,Conference room booking,"Hi,
+
+I've booked the large conference room for our team meeting on Tuesday. Calendar invite to follow.
+
+James",2025-10-26T17:40:00,Trading,Trading,CLEAN
+ea0a00d0-0014-4b12-bfad-c8b63790f031,a.foster@acmefund.com,a.bell@acmefund.com,,Office closure reminder - Holiday,"Team,
+
+Just a friendly reminder that the office will be closed next Friday for the holiday. Please plan accordingly.
+
+Regards,
+Amanda",2025-10-27T06:21:00,Portfolio Management,Client Relations,CLEAN
+e186fd38-61e9-413c-a80f-f5c794b26493,s.chen@acmefund.com,r.hayes@acmefund.com,p.sharma@acmefund.com,Updated compliance training schedule,"All,
+
+The annual compliance training has been rescheduled to next Monday. Please block your calendars from 10am-12pm.
+
+Best,
+Sarah",2025-10-27T15:21:00,Research,Compliance,CLEAN
+658fb2bb-f169-4775-88c6-ab2abe6b0492,d.park@acmefund.com,m.torres@acmefund.com,,Quick trade question,"Michael,
+
+Thinking of buying some puts on a stock we're long in the fund. Just in my personal account though. Should be fine right? Don't want to bother with pre-clearance.
+
+David",2025-10-28T17:29:00,Trading,Portfolio Management,PERSONAL_TRADING
+16244f80-5e70-4424-b1ff-3cdf1b65d514,d.park@acmefund.com,a.bell@acmefund.com,,Performance data you asked for,"As discussed, here are the detailed performance numbers for our top 5 clients' accounts. Please don't share this externally - I could get in serious trouble.
+
+David",2025-10-30T11:13:00,Trading,Client Relations,CONFIDENTIALITY_BREACH
+fa507bc1-70ca-46b4-9b51-9de5a3c829cb,l.martinez@acmefund.com,a.bell@acmefund.com,,Monthly risk report - draft for review,"Hi Andrew,
+
+Attached is the draft monthly risk report. Please review and send any comments by EOD Wednesday.
+
+Thanks,
+Lisa",2025-11-02T10:24:00,Operations,Client Relations,CLEAN
+88ec1dcf-d0c1-4cbc-a0b8-4088b756cc95,j.liu@acmefund.com,r.hayes@acmefund.com,,Weekly team sync notes,"Hi all,
+
+Attached are the notes from today's sync. Action items highlighted in yellow.
+
+Thanks,
+Jennifer",2025-11-02T12:02:00,Compliance,Compliance,CLEAN
+3ea919ad-d28a-4a3b-be06-005ae0d9883d,d.park@acmefund.com,m.torres@acmefund.com,,Quiet tip,"Don't share this with anyone - GlobalBank is about to announce layoffs and restructuring. Their stock will tank. You didn't hear this from me.
+
+David",2025-11-02T15:07:00,Trading,Portfolio Management,INSIDER_TRADING
+2cef8472-528f-4e18-bd7f-0ea3a654e293,t.grant@acmefund.com,r.kim@acmefund.com,,System maintenance notification,"Team,
+
+IT has scheduled system maintenance for Saturday 2am-6am. Trading systems will be unavailable during this window.
+
+Please plan accordingly.
+Thomas",2025-11-03T22:57:00,Legal,Client Relations,CLEAN
+90620ce9-0462-4921-8b7a-9bd9e255fa0f,p.sharma@acmefund.com,l.martinez@acmefund.com,,Monthly risk report - draft for review,"Hi Lisa,
+
+Attached is the draft monthly risk report. Please review and send any comments by EOD Wednesday.
+
+Thanks,
+Priya",2025-11-04T08:29:00,Research,Operations,CLEAN
+9acb6b50-1ba7-46c0-a10b-bdb78c0cec63,j.morrison@acmefund.com,a.bell@acmefund.com,,Updated compliance training schedule,"All,
+
+The annual compliance training has been rescheduled to next Monday. Please block your calendars from 10am-12pm.
+
+Best,
+James",2025-11-04T17:54:00,Trading,Client Relations,CLEAN
+4e0d732c-0899-4f7e-a612-3cf257a3e04e,d.park@acmefund.com,s.chen@acmefund.com,,System maintenance notification,"Team,
+
+IT has scheduled system maintenance for Saturday 2am-6am. Trading systems will be unavailable during this window.
+
+Please plan accordingly.
+David",2025-11-05T15:32:00,Trading,Research,CLEAN
+8f25d66c-12a0-44a9-ac8b-4ff1563c2317,j.liu@acmefund.com,r.hayes@acmefund.com,,RE: Hedge fund strategies,"Here's our fund's full trading strategy doc. I know you're at a competitor now but this might help you. Delete after reading.
+
+Jennifer",2025-11-06T11:52:00,Compliance,Compliance,CONFIDENTIALITY_BREACH
+caf88c19-36bd-4638-b9db-e94b3b277fe0,r.hayes@acmefund.com,r.kim@acmefund.com,,RE: Hedge fund strategies,"Here's our fund's full trading strategy doc. I know you're at a competitor now but this might help you. Delete after reading.
+
+Robert",2025-11-06T14:47:00,Compliance,Client Relations,CONFIDENTIALITY_BREACH
+0cebd0d6-2b14-4afb-8fb5-d9fb3df20464,m.torres@acmefund.com,p.sharma@acmefund.com,,FW: Client portfolio details,"Hey,
+
+Forwarding you the Westbrook pension fund's full portfolio breakdown. They're way overexposed to energy. Don't tell anyone I sent this.
+
+Michael",2025-11-08T11:26:00,Portfolio Management,Research,CONFIDENTIALITY_BREACH
+538abefc-d433-451f-b160-826e997c0e61,s.chen@acmefund.com,p.sharma@acmefund.com,,RE: Lunch order for client meeting,"Sounds good. I'll order from the usual place. Can you confirm headcount by noon?
+
+Sarah",2025-11-08T11:33:00,Research,Research,CLEAN
+1cbc21a9-b107-4967-adf8-cb52143b4917,l.martinez@acmefund.com,e.volkov@acmefund.com,,Q4 Portfolio Review Meeting,"Hi team,
+
+Just a reminder about our Q4 portfolio review meeting scheduled for Thursday at 2pm. Please come prepared with your sector updates.
+
+Thanks,
+Lisa",2025-11-08T11:46:00,Operations,Trading,CLEAN
+4f6ab3f5-9624-48e2-908a-ae5eb794ff30,e.volkov@acmefund.com,m.webb@acmefund.com,,Research update - please read,"James,
+
+I know we're not supposed to share this directly, but my team just finished our analysis on Quantum Industries. Rating it a strong buy. Wanted you to have a heads up before it goes through official channels.
+
+- Sarah (Research)",2025-11-08T13:55:00,Trading,Research,INFO_BARRIER_VIOLATION
+32445ac3-87c3-47a5-95aa-5732c21d362c,j.morrison@acmefund.com,a.bell@acmefund.com,,Side investment opportunity,"Found a great IPO coming up. Going to buy in my wife's account to avoid the disclosure requirements. Let me know if you want details.
+
+James",2025-11-09T11:03:00,Trading,Client Relations,PERSONAL_TRADING
+eb136c03-d5f9-45fe-a047-d1118bec77ff,j.liu@acmefund.com,m.torres@acmefund.com,,Welcome aboard!,"Hi Michael,
+
+Welcome to the team! I've set up your onboarding meetings for next week. Please reach out if you have any questions.
+
+Best,
+Jennifer",2025-11-09T12:48:00,Compliance,Portfolio Management,CLEAN
+1f5a9254-3879-4433-be80-b2be45be5ec2,m.torres@acmefund.com,k.obrien@acmefund.com,,Office closure reminder - Holiday,"Team,
+
+Just a friendly reminder that the office will be closed next Friday for the holiday. Please plan accordingly.
+
+Regards,
+Michael",2025-11-10T11:17:00,Portfolio Management,Operations,CLEAN
+b0739536-38ad-44e1-ac92-ccedcbaef741,t.grant@acmefund.com,k.obrien@acmefund.com,,Welcome aboard!,"Hi Kevin,
+
+Welcome to the team! I've set up your onboarding meetings for next week. Please reach out if you have any questions.
+
+Best,
+Thomas",2025-11-10T19:33:00,Legal,Operations,CLEAN
+7d6a4fb1-2942-4e71-90d1-bc4b0b876d84,d.park@acmefund.com,r.kim@acmefund.com,,RE: Tech sector positions,"Trust me on this one - load up on TECH before Friday. I can't say more but the earnings will blow expectations away. My source is solid.
+
+David",2025-11-12T10:25:00,Trading,Client Relations,INSIDER_TRADING
+47b8bb8b-6acb-4ff7-a39d-ff6637cb04bc,t.grant@acmefund.com,j.morrison@acmefund.com,,Performance data you asked for,"As discussed, here are the detailed performance numbers for our top 5 clients' accounts. Please don't share this externally - I could get in serious trouble.
+
+Thomas",2025-11-12T10:30:00,Legal,Trading,CONFIDENTIALITY_BREACH
+43049cf5-a899-42b7-8e64-66390628750e,r.kim@acmefund.com,t.grant@acmefund.com,,Welcome aboard!,"Hi Thomas,
+
+Welcome to the team! I've set up your onboarding meetings for next week. Please reach out if you have any questions.
+
+Best,
+Rachel",2025-11-14T08:11:00,Client Relations,Legal,CLEAN
+0b09223f-57ec-44f2-858e-77aab0e0ebf8,l.martinez@acmefund.com,m.webb@acmefund.com,,Updated compliance training schedule,"All,
+
+The annual compliance training has been rescheduled to next Monday. Please block your calendars from 10am-12pm.
+
+Best,
+Lisa",2025-11-14T17:05:00,Operations,Research,CLEAN
+755eeae4-d8bd-4cbf-a2fe-ab3876cbc61e,m.torres@acmefund.com,k.obrien@acmefund.com,,RE: Hedge fund strategies,"Here's our fund's full trading strategy doc. I know you're at a competitor now but this might help you. Delete after reading.
+
+Michael",2025-11-15T20:30:00,Portfolio Management,Operations,CONFIDENTIALITY_BREACH
+d06ee054-ff3d-4aad-a9a9-e481fcdfe191,p.sharma@acmefund.com,r.hayes@acmefund.com,,Q4 Portfolio Review Meeting,"Hi team,
+
+Just a reminder about our Q4 portfolio review meeting scheduled for Thursday at 2pm. Please come prepared with your sector updates.
+
+Thanks,
+Priya",2025-11-16T10:48:00,Research,Compliance,CLEAN
+1047e79e-cd26-454d-9e58-306ed7ad389b,p.sharma@acmefund.com,r.hayes@acmefund.com,,Pharma play - time sensitive,"Robert,
+
+FDA approval coming through for BioMed's drug application. Not announced yet but I got word from inside. This could move 30%+. Act fast.
+
+Priya",2025-11-16T13:22:00,Research,Compliance,INSIDER_TRADING
+94a5fb49-24c6-4565-a553-491083f87f24,m.torres@acmefund.com,a.bell@acmefund.com,,RE: Lunch order for client meeting,"Sounds good. I'll order from the usual place. Can you confirm headcount by noon?
+
+Michael",2025-11-16T13:49:00,Portfolio Management,Client Relations,CLEAN
+d0d4edd4-ef08-4cd1-83de-39c129997fc1,t.grant@acmefund.com,l.martinez@acmefund.com,,Office closure reminder - Holiday,"Team,
+
+Just a friendly reminder that the office will be closed next Friday for the holiday. Please plan accordingly.
+
+Regards,
+Thomas",2025-11-17T09:44:00,Legal,Operations,CLEAN
+e8617b85-afd5-466e-bd7c-43e72ecc4825,d.park@acmefund.com,l.martinez@acmefund.com,,Updated compliance training schedule,"All,
+
+The annual compliance training has been rescheduled to next Monday. Please block your calendars from 10am-12pm.
+
+Best,
+David",2025-11-18T06:41:00,Trading,Operations,CLEAN
+3b471ab0-50df-47a3-ac34-98f12be0f290,a.bell@acmefund.com,e.volkov@acmefund.com,,Quick trade question,"Elena,
+
+Thinking of buying some puts on a stock we're long in the fund. Just in my personal account though. Should be fine right? Don't want to bother with pre-clearance.
+
+Andrew",2025-11-18T09:57:00,Client Relations,Trading,PERSONAL_TRADING
+03ec5db1-b162-4120-ba38-62fdf6b062e7,e.volkov@acmefund.com,p.sharma@acmefund.com,,Weekly team sync notes,"Hi all,
+
+Attached are the notes from today's sync. Action items highlighted in yellow.
+
+Thanks,
+Elena",2025-11-18T18:11:00,Trading,Research,CLEAN
+e273fb42-183e-4a34-bd8c-b3c1d7c588c1,p.sharma@acmefund.com,r.hayes@acmefund.com,a.bell@acmefund.com,RE: Vacation request,"Approved. Enjoy your time off!
+
+Priya",2025-11-19T16:01:00,Research,Compliance,CLEAN
+34c4ad58-5712-4014-85f5-1270d7fc314e,e.volkov@acmefund.com,r.hayes@acmefund.com,,Updated compliance training schedule,"All,
+
+The annual compliance training has been rescheduled to next Monday. Please block your calendars from 10am-12pm.
+
+Best,
+Elena",2025-11-20T16:57:00,Trading,Compliance,CLEAN
+1297df20-a010-4285-8b1a-2cf34a5741f0,a.bell@acmefund.com,r.kim@acmefund.com,,Welcome aboard!,"Hi Rachel,
+
+Welcome to the team! I've set up your onboarding meetings for next week. Please reach out if you have any questions.
+
+Best,
+Andrew",2025-11-21T18:35:00,Client Relations,Client Relations,CLEAN
+5a0d3205-e20e-45ca-92a2-c9b262979c62,e.volkov@acmefund.com,m.torres@acmefund.com,,Q4 Portfolio Review Meeting,"Hi team,
+
+Just a reminder about our Q4 portfolio review meeting scheduled for Thursday at 2pm. Please come prepared with your sector updates.
+
+Thanks,
+Elena",2025-11-22T06:57:00,Trading,Portfolio Management,CLEAN
+7543733e-8ff7-40c8-8563-4b8aecca24b1,s.chen@acmefund.com,r.kim@acmefund.com,,RE: Investment advice,"For my PA, I'm going heavy into crypto this month. Already moved $50k. Don't mention this to compliance - it's under their radar.
+
+Sarah",2025-11-22T13:29:00,Research,Client Relations,PERSONAL_TRADING
+721defa2-be6e-47fa-ac10-60337737ccca,s.chen@acmefund.com,j.morrison@acmefund.com,,RE: Lunch order for client meeting,"Sounds good. I'll order from the usual place. Can you confirm headcount by noon?
+
+Sarah",2025-11-23T19:05:00,Research,Trading,CLEAN
+3578cb31-8ab0-481d-bbbc-3233d160d481,a.bell@acmefund.com,r.hayes@acmefund.com,,RE: After hours trading,"Yeah I've been day trading in my Schwab account. Made $20k last month! Haven't reported it yet since it's small amounts. Compliance doesn't need to know everything.
+
+Andrew",2025-11-24T10:54:00,Client Relations,Compliance,PERSONAL_TRADING
+09ae724b-b1fb-4936-8e62-1ec35c3a11c5,d.park@acmefund.com,s.chen@acmefund.com,,Sector meeting notes - confidential,"Sarah,
+
+Here are notes from our research team meeting on healthcare. We're changing several ratings next week. Keep this between us - I'm not supposed to share pre-publication.
+
+David",2025-11-24T16:04:00,Trading,Research,INFO_BARRIER_VIOLATION
+1132266b-25a3-4804-ab9c-1b47d6b5f3ac,e.volkov@acmefund.com,k.obrien@acmefund.com,,RE: Hedge fund strategies,"Here's our fund's full trading strategy doc. I know you're at a competitor now but this might help you. Delete after reading.
+
+Elena",2025-11-25T15:33:00,Trading,Operations,CONFIDENTIALITY_BREACH
+fb0fe7fd-98c1-4664-8149-29b65e0e8a11,s.chen@acmefund.com,k.obrien@acmefund.com,p.sharma@acmefund.com,Q4 Portfolio Review Meeting,"Hi team,
+
+Just a reminder about our Q4 portfolio review meeting scheduled for Thursday at 2pm. Please come prepared with your sector updates.
+
+Thanks,
+Sarah",2025-11-25T18:24:00,Research,Operations,CLEAN
+36e17675-334c-41bd-b1fc-20dd554dff5b,m.webb@acmefund.com,t.grant@acmefund.com,,Quiet tip,"Don't share this with anyone - GlobalBank is about to announce layoffs and restructuring. Their stock will tank. You didn't hear this from me.
+
+Marcus",2025-11-26T11:16:00,Research,Legal,INSIDER_TRADING
+8fe859f7-cdee-4b1c-8df3-03b35b5fc313,j.morrison@acmefund.com,j.liu@acmefund.com,m.webb@acmefund.com,System maintenance notification,"Team,
+
+IT has scheduled system maintenance for Saturday 2am-6am. Trading systems will be unavailable during this window.
+
+Please plan accordingly.
+James",2025-11-26T12:54:00,Trading,Compliance,CLEAN
+1e416bd2-1306-4432-8fa5-c5c8a8439498,p.sharma@acmefund.com,a.bell@acmefund.com,,System maintenance notification,"Team,
+
+IT has scheduled system maintenance for Saturday 2am-6am. Trading systems will be unavailable during this window.
+
+Please plan accordingly.
+Priya",2025-11-27T16:29:00,Research,Client Relations,CLEAN
+e87a549d-be3c-482f-b35b-e0c47b9013de,k.obrien@acmefund.com,j.morrison@acmefund.com,,Welcome aboard!,"Hi James,
+
+Welcome to the team! I've set up your onboarding meetings for next week. Please reach out if you have any questions.
+
+Best,
+Kevin",2025-11-28T07:13:00,Operations,Trading,CLEAN
+8fe81d92-c06c-49b2-aea3-6733f3a5d089,m.webb@acmefund.com,t.grant@acmefund.com,,Monthly risk report - draft for review,"Hi Thomas,
+
+Attached is the draft monthly risk report. Please review and send any comments by EOD Wednesday.
+
+Thanks,
+Marcus",2025-11-28T12:19:00,Research,Legal,CLEAN
+d30f26c9-811c-488d-b3e4-bbeab5af9cf1,k.obrien@acmefund.com,t.grant@acmefund.com,,Welcome aboard!,"Hi Thomas,
+
+Welcome to the team! I've set up your onboarding meetings for next week. Please reach out if you have any questions.
+
+Best,
+Kevin",2025-11-28T21:20:00,Operations,Legal,CLEAN
+71129363-698f-456f-b24e-35fd38081283,k.obrien@acmefund.com,t.grant@acmefund.com,j.morrison@acmefund.com,Office closure reminder - Holiday,"Team,
+
+Just a friendly reminder that the office will be closed next Friday for the holiday. Please plan accordingly.
+
+Regards,
+Kevin",2025-11-29T11:33:00,Operations,Legal,CLEAN
+3c18233c-39b7-4188-a306-ee780a4f55e5,d.park@acmefund.com,l.martinez@acmefund.com,,RE: Hedge fund strategies,"Here's our fund's full trading strategy doc. I know you're at a competitor now but this might help you. Delete after reading.
+
+David",2025-11-29T20:25:00,Trading,Operations,CONFIDENTIALITY_BREACH
+88bb4382-be88-4607-bdd3-8df8cf1519c5,m.webb@acmefund.com,a.bell@acmefund.com,,RE: Vacation request,"Approved. Enjoy your time off!
+
+Marcus",2025-11-30T06:38:00,Research,Client Relations,CLEAN
+aca6b8d8-3d27-4ca3-9a35-8eb1f0effef9,d.park@acmefund.com,k.obrien@acmefund.com,,RE: Vacation request,"Approved. Enjoy your time off!
+
+David",2025-11-30T08:32:00,Trading,Operations,CLEAN
+12af2fcd-3abd-49bc-9e16-bacf1c0837a5,j.morrison@acmefund.com,r.kim@acmefund.com,,Conference room booking,"Hi,
+
+I've booked the large conference room for our team meeting on Tuesday. Calendar invite to follow.
+
+James",2025-12-02T18:13:00,Trading,Client Relations,CLEAN
+815e8d47-8dbd-44e2-99c2-8e090105a501,m.webb@acmefund.com,a.bell@acmefund.com,,Updated compliance training schedule,"All,
+
+The annual compliance training has been rescheduled to next Monday. Please block your calendars from 10am-12pm.
+
+Best,
+Marcus",2025-12-03T09:06:00,Research,Client Relations,CLEAN
+4e381394-a442-4a44-8e5a-c9ea3af55004,e.volkov@acmefund.com,p.sharma@acmefund.com,,Conference room booking,"Hi,
+
+I've booked the large conference room for our team meeting on Tuesday. Calendar invite to follow.
+
+Elena",2025-12-04T09:02:00,Trading,Research,CLEAN
+ff94ab91-2ee8-4df4-8171-fda83ae492b1,a.foster@acmefund.com,j.morrison@acmefund.com,,Side investment opportunity,"Found a great IPO coming up. Going to buy in my wife's account to avoid the disclosure requirements. Let me know if you want details.
+
+Amanda",2025-12-06T12:04:00,Portfolio Management,Trading,PERSONAL_TRADING
+756cc756-9aad-4f28-90ab-5d190f7e7785,m.webb@acmefund.com,l.martinez@acmefund.com,,RE: Investment advice,"For my PA, I'm going heavy into crypto this month. Already moved $50k. Don't mention this to compliance - it's under their radar.
+
+Marcus",2025-12-06T14:36:00,Research,Operations,PERSONAL_TRADING
+3d32f444-93de-4e10-978b-13e9175fdc29,r.hayes@acmefund.com,a.bell@acmefund.com,,Performance data you asked for,"As discussed, here are the detailed performance numbers for our top 5 clients' accounts. Please don't share this externally - I could get in serious trouble.
+
+Robert",2025-12-06T18:14:00,Compliance,Client Relations,CONFIDENTIALITY_BREACH
+26899f50-f8c0-4a69-8176-0545ba673a8c,a.foster@acmefund.com,p.sharma@acmefund.com,r.hayes@acmefund.com,Weekly team sync notes,"Hi all,
+
+Attached are the notes from today's sync. Action items highlighted in yellow.
+
+Thanks,
+Amanda",2025-12-07T14:08:00,Portfolio Management,Research,CLEAN
+226282f5-d8ef-419b-8239-a2dea70232b2,m.webb@acmefund.com,m.torres@acmefund.com,,RE: Market outlook,"Forget the analysis - I have inside info that MegaCorp's CEO is resigning next week. Dump the position before it goes public. This is solid intel.
+
+Marcus",2025-12-09T10:16:00,Research,Portfolio Management,INSIDER_TRADING
+14a123fc-3e63-46ed-a9d7-c2f2546497a4,l.martinez@acmefund.com,j.liu@acmefund.com,t.grant@acmefund.com,Weekly team sync notes,"Hi all,
+
+Attached are the notes from today's sync. Action items highlighted in yellow.
+
+Thanks,
+Lisa",2025-12-09T10:25:00,Operations,Compliance,CLEAN
+d82da319-dd67-405c-bf9f-fa0f07195571,s.chen@acmefund.com,a.bell@acmefund.com,,Conference room booking,"Hi,
+
+I've booked the large conference room for our team meeting on Tuesday. Calendar invite to follow.
+
+Sarah",2025-12-10T09:20:00,Research,Client Relations,CLEAN
+15ee5082-0477-4b47-a603-986c8f614d61,r.hayes@acmefund.com,e.volkov@acmefund.com,,Conference room booking,"Hi,
+
+I've booked the large conference room for our team meeting on Tuesday. Calendar invite to follow.
+
+Robert",2025-12-10T10:57:00,Compliance,Trading,CLEAN
+f5c5258b-565b-4b50-bffa-7fb58fbe14b2,d.park@acmefund.com,j.morrison@acmefund.com,,URGENT - Acme Corp news coming,"Hey,
+
+Heads up - I heard from my contact at Acme that they're announcing a major acquisition tomorrow morning. This isn't public yet. Might want to adjust positions before the announcement.
+
+Keep this between us.
+David",2025-12-10T14:40:00,Trading,Trading,INSIDER_TRADING
+f7b9e7fd-39da-4105-8c9d-b53f8de8fda0,r.hayes@acmefund.com,m.webb@acmefund.com,,RE: Vacation request,"Approved. Enjoy your time off!
+
+Robert",2025-12-11T09:38:00,Compliance,Research,CLEAN
+6afd7b15-2c52-4e57-9a16-5754ced35ebf,a.bell@acmefund.com,m.webb@acmefund.com,,RE: Lunch order for client meeting,"Sounds good. I'll order from the usual place. Can you confirm headcount by noon?
+
+Andrew",2025-12-11T12:32:00,Client Relations,Research,CLEAN
+107f2b1b-3fb2-4d18-b252-b9ee612a1842,r.hayes@acmefund.com,j.morrison@acmefund.com,,RE: Lunch order for client meeting,"Sounds good. I'll order from the usual place. Can you confirm headcount by noon?
+
+Robert",2025-12-11T13:28:00,Compliance,Trading,CLEAN
+67e98857-784f-40b9-b937-1ce5910534a6,e.volkov@acmefund.com,t.grant@acmefund.com,,System maintenance notification,"Team,
+
+IT has scheduled system maintenance for Saturday 2am-6am. Trading systems will be unavailable during this window.
+
+Please plan accordingly.
+Elena",2025-12-11T14:06:00,Trading,Legal,CLEAN
+95a36a0c-24c9-47bc-9ce1-418911f9bd4d,j.liu@acmefund.com,m.webb@acmefund.com,,Conference room booking,"Hi,
+
+I've booked the large conference room for our team meeting on Tuesday. Calendar invite to follow.
+
+Jennifer",2025-12-12T07:27:00,Compliance,Research,CLEAN
+9007c9f2-7162-4d27-a415-8f53c6010dcc,l.martinez@acmefund.com,t.grant@acmefund.com,,System maintenance notification,"Team,
+
+IT has scheduled system maintenance for Saturday 2am-6am. Trading systems will be unavailable during this window.
+
+Please plan accordingly.
+Lisa",2025-12-12T10:03:00,Operations,Legal,CLEAN
+48174085-658d-41de-9edd-5ed92d30bd8c,a.bell@acmefund.com,r.hayes@acmefund.com,,RE: Vacation request,"Approved. Enjoy your time off!
+
+Andrew",2025-12-12T16:06:00,Client Relations,Compliance,CLEAN
+a35e77b2-d077-4319-9ffe-53bbf3c58aca,p.sharma@acmefund.com,a.foster@acmefund.com,,Quiet tip,"Don't share this with anyone - GlobalBank is about to announce layoffs and restructuring. Their stock will tank. You didn't hear this from me.
+
+Priya",2025-12-14T16:07:00,Research,Portfolio Management,INSIDER_TRADING
+a8048554-d5e7-46c4-964e-b6dcd46aaf4c,p.sharma@acmefund.com,r.kim@acmefund.com,,Updated compliance training schedule,"All,
+
+The annual compliance training has been rescheduled to next Monday. Please block your calendars from 10am-12pm.
+
+Best,
+Priya",2025-12-14T21:28:00,Research,Client Relations,CLEAN
+23760789-e426-47e8-9158-38a5526d390b,j.liu@acmefund.com,p.sharma@acmefund.com,,RE: Market outlook,"Forget the analysis - I have inside info that MegaCorp's CEO is resigning next week. Dump the position before it goes public. This is solid intel.
+
+Jennifer",2025-12-16T15:13:00,Compliance,Research,INSIDER_TRADING
+bee30a05-f4a3-4f8c-b44e-863812db90f7,r.kim@acmefund.com,a.foster@acmefund.com,,RE: Lunch order for client meeting,"Sounds good. I'll order from the usual place. Can you confirm headcount by noon?
+
+Rachel",2025-12-16T18:34:00,Client Relations,Portfolio Management,CLEAN
+cc97755b-2353-45a9-abf2-b8af45ba2227,d.park@acmefund.com,t.grant@acmefund.com,,Updated compliance training schedule,"All,
+
+The annual compliance training has been rescheduled to next Monday. Please block your calendars from 10am-12pm.
+
+Best,
+David",2025-12-17T14:21:00,Trading,Legal,CLEAN
+22377d04-c37a-4b5b-82e2-2687df5ab883,p.sharma@acmefund.com,l.martinez@acmefund.com,,RE: Lunch order for client meeting,"Sounds good. I'll order from the usual place. Can you confirm headcount by noon?
+
+Priya",2025-12-18T17:30:00,Research,Operations,CLEAN
+2a10458a-8d41-4d36-b708-3a0db44150f4,j.liu@acmefund.com,m.torres@acmefund.com,,RE: Market outlook,"Forget the analysis - I have inside info that MegaCorp's CEO is resigning next week. Dump the position before it goes public. This is solid intel.
+
+Jennifer",2025-12-20T06:05:00,Compliance,Portfolio Management,INSIDER_TRADING
+32484a51-f3a4-41e3-b668-b1875546df90,l.martinez@acmefund.com,t.grant@acmefund.com,,Conference room booking,"Hi,
+
+I've booked the large conference room for our team meeting on Tuesday. Calendar invite to follow.
+
+Lisa",2025-12-20T10:18:00,Operations,Legal,CLEAN
+584afd7a-5c00-4c49-9c6a-2e3ecc18336d,a.bell@acmefund.com,t.grant@acmefund.com,,RE: Market outlook,"Forget the analysis - I have inside info that MegaCorp's CEO is resigning next week. Dump the position before it goes public. This is solid intel.
+
+Andrew",2025-12-20T20:35:00,Client Relations,Legal,INSIDER_TRADING
+7af33c23-7161-43e6-b922-692a40a5990d,a.foster@acmefund.com,p.sharma@acmefund.com,,Pharma play - time sensitive,"Priya,
+
+FDA approval coming through for BioMed's drug application. Not announced yet but I got word from inside. This could move 30%+. Act fast.
+
+Amanda",2025-12-21T16:10:00,Portfolio Management,Research,INSIDER_TRADING
+5f7b6331-d57a-470b-a61b-0ead15e7d527,a.bell@acmefund.com,e.volkov@acmefund.com,j.morrison@acmefund.com,Conference room booking,"Hi,
+
+I've booked the large conference room for our team meeting on Tuesday. Calendar invite to follow.
+
+Andrew",2025-12-21T16:15:00,Client Relations,Trading,CLEAN
+7f87e03d-9b43-4fe2-b0ad-fc9cf2a9ef26,t.grant@acmefund.com,e.volkov@acmefund.com,,RE: Tech sector positions,"Trust me on this one - load up on TECH before Friday. I can't say more but the earnings will blow expectations away. My source is solid.
+
+Thomas",2025-12-23T09:56:00,Legal,Trading,INSIDER_TRADING
+c8b2dedc-7556-4f82-a0fd-6710dda8ef10,r.hayes@acmefund.com,e.volkov@acmefund.com,j.liu@acmefund.com,RE: Hedge fund strategies,"Here's our fund's full trading strategy doc. I know you're at a competitor now but this might help you. Delete after reading.
+
+Robert",2025-12-23T18:32:00,Compliance,Trading,CONFIDENTIALITY_BREACH
+0f74fa20-dd10-4184-97fd-6e36d1dd7580,e.volkov@acmefund.com,t.grant@acmefund.com,,Updated compliance training schedule,"All,
+
+The annual compliance training has been rescheduled to next Monday. Please block your calendars from 10am-12pm.
+
+Best,
+Elena",2025-12-24T10:17:00,Trading,Legal,CLEAN
+781ffd98-6e79-4572-9761-6be88e3f86bd,m.webb@acmefund.com,j.liu@acmefund.com,,Office closure reminder - Holiday,"Team,
+
+Just a friendly reminder that the office will be closed next Friday for the holiday. Please plan accordingly.
+
+Regards,
+Marcus",2025-12-25T08:32:00,Research,Compliance,CLEAN
+248193c4-857e-4460-9f34-26e29e9fe427,m.torres@acmefund.com,e.volkov@acmefund.com,,Weekly team sync notes,"Hi all,
+
+Attached are the notes from today's sync. Action items highlighted in yellow.
+
+Thanks,
+Michael",2025-12-25T12:10:00,Portfolio Management,Trading,CLEAN
+48f88c53-1855-4d27-9dc6-ccbb7e7d667a,t.grant@acmefund.com,a.bell@acmefund.com,,RE: Lunch order for client meeting,"Sounds good. I'll order from the usual place. Can you confirm headcount by noon?
+
+Thomas",2025-12-25T15:10:00,Legal,Client Relations,CLEAN
+569ad084-7ded-4c2f-b2e6-2cce7599434f,a.foster@acmefund.com,r.hayes@acmefund.com,,RE: Tech sector positions,"Trust me on this one - load up on TECH before Friday. I can't say more but the earnings will blow expectations away. My source is solid.
+
+Amanda",2025-12-27T11:41:00,Portfolio Management,Compliance,INSIDER_TRADING
+bde4cbb0-5d5d-4b9b-adfa-e9a059e7817d,s.chen@acmefund.com,r.hayes@acmefund.com,,Q4 Portfolio Review Meeting,"Hi team,
+
+Just a reminder about our Q4 portfolio review meeting scheduled for Thursday at 2pm. Please come prepared with your sector updates.
+
+Thanks,
+Sarah",2025-12-28T14:38:00,Research,Compliance,CLEAN
+7136671a-8c29-45ca-9124-18ad2d03dee3,r.hayes@acmefund.com,j.liu@acmefund.com,,Monthly risk report - draft for review,"Hi Jennifer,
+
+Attached is the draft monthly risk report. Please review and send any comments by EOD Wednesday.
+
+Thanks,
+Robert",2025-12-28T21:50:00,Compliance,Compliance,CLEAN
+6e29b91d-007b-4c5e-ae5b-f4e5f9bee356,a.foster@acmefund.com,m.webb@acmefund.com,,System maintenance notification,"Team,
+
+IT has scheduled system maintenance for Saturday 2am-6am. Trading systems will be unavailable during this window.
+
+Please plan accordingly.
+Amanda",2025-12-29T12:56:00,Portfolio Management,Research,CLEAN
+c7e82700-b2d8-4eda-b372-273cc281af79,r.hayes@acmefund.com,d.park@acmefund.com,,Updated compliance training schedule,"All,
+
+The annual compliance training has been rescheduled to next Monday. Please block your calendars from 10am-12pm.
+
+Best,
+Robert",2025-12-31T08:09:00,Compliance,Trading,CLEAN
+9813966c-09d5-4f3a-bb17-6b573c31437b,j.morrison@acmefund.com,r.kim@acmefund.com,,Weekly team sync notes,"Hi all,
+
+Attached are the notes from today's sync. Action items highlighted in yellow.
+
+Thanks,
+James",2025-12-31T13:05:00,Trading,Client Relations,CLEAN
+082bd543-172f-41c3-9ba1-46e9e7ed617d,r.kim@acmefund.com,m.torres@acmefund.com,,Updated compliance training schedule,"All,
+
+The annual compliance training has been rescheduled to next Monday. Please block your calendars from 10am-12pm.
+
+Best,
+Rachel",2026-01-01T14:37:00,Client Relations,Portfolio Management,CLEAN
+703243c0-7131-4908-83cf-9278777950be,k.obrien@acmefund.com,j.liu@acmefund.com,,Monthly risk report - draft for review,"Hi Jennifer,
+
+Attached is the draft monthly risk report. Please review and send any comments by EOD Wednesday.
+
+Thanks,
+Kevin",2026-01-02T08:38:00,Operations,Compliance,CLEAN
+cd882274-d923-4131-904c-75a31a59182e,r.kim@acmefund.com,j.liu@acmefund.com,s.chen@acmefund.com,Updated compliance training schedule,"All,
+
+The annual compliance training has been rescheduled to next Monday. Please block your calendars from 10am-12pm.
+
+Best,
+Rachel",2026-01-02T17:59:00,Client Relations,Compliance,CLEAN
+23994ecf-5543-481c-81af-abaf261e523c,m.torres@acmefund.com,a.foster@acmefund.com,,Updated compliance training schedule,"All,
+
+The annual compliance training has been rescheduled to next Monday. Please block your calendars from 10am-12pm.
+
+Best,
+Michael",2026-01-03T09:48:00,Portfolio Management,Portfolio Management,CLEAN
+8cb1d194-0c93-4d7b-af86-8b030ce8aac4,j.liu@acmefund.com,l.martinez@acmefund.com,,RE: Vacation request,"Approved. Enjoy your time off!
+
+Jennifer",2026-01-03T11:57:00,Compliance,Operations,CLEAN
+18854fdd-ecbc-447e-ab49-9919d03a306c,m.webb@acmefund.com,d.park@acmefund.com,e.volkov@acmefund.com,RE: Lunch order for client meeting,"Sounds good. I'll order from the usual place. Can you confirm headcount by noon?
+
+Marcus",2026-01-03T13:15:00,Research,Trading,CLEAN
+6b4c37bb-e447-462a-87dd-6fd47ad5ae8b,r.kim@acmefund.com,s.chen@acmefund.com,l.martinez@acmefund.com,Weekly team sync notes,"Hi all,
+
+Attached are the notes from today's sync. Action items highlighted in yellow.
+
+Thanks,
+Rachel",2026-01-03T17:55:00,Client Relations,Research,CLEAN
+2f5a9efa-3bd8-4096-93d4-99ab6d33dd81,r.kim@acmefund.com,j.morrison@acmefund.com,,URGENT - Acme Corp news coming,"Hey,
+
+Heads up - I heard from my contact at Acme that they're announcing a major acquisition tomorrow morning. This isn't public yet. Might want to adjust positions before the announcement.
+
+Keep this between us.
+Rachel",2026-01-03T18:55:00,Client Relations,Trading,INSIDER_TRADING
+ce6bf001-d725-47bd-ad1d-a539d172d60d,j.morrison@acmefund.com,s.chen@acmefund.com,,System maintenance notification,"Team,
+
+IT has scheduled system maintenance for Saturday 2am-6am. Trading systems will be unavailable during this window.
+
+Please plan accordingly.
+James",2026-01-03T22:46:00,Trading,Research,CLEAN
+10b77e49-f47a-4723-8bab-5c1c96e2cd80,d.park@acmefund.com,p.sharma@acmefund.com,m.webb@acmefund.com,Updated compliance training schedule,"All,
+
+The annual compliance training has been rescheduled to next Monday. Please block your calendars from 10am-12pm.
+
+Best,
+David",2026-01-04T11:00:00,Trading,Research,CLEAN
+2d1f1bc3-97b9-4811-8dd8-2fe6c8179e25,s.chen@acmefund.com,k.obrien@acmefund.com,,Office closure reminder - Holiday,"Team,
+
+Just a friendly reminder that the office will be closed next Friday for the holiday. Please plan accordingly.
+
+Regards,
+Sarah",2026-01-04T17:05:00,Research,Operations,CLEAN
+f041b16b-f7f6-4c61-b91b-47e5dc0ac8ee,s.chen@acmefund.com,a.bell@acmefund.com,r.kim@acmefund.com,Q4 Portfolio Review Meeting,"Hi team,
+
+Just a reminder about our Q4 portfolio review meeting scheduled for Thursday at 2pm. Please come prepared with your sector updates.
+
+Thanks,
+Sarah",2026-01-04T19:49:00,Research,Client Relations,CLEAN
+e020c969-f67b-4986-86d0-a69b63b83af5,r.kim@acmefund.com,e.volkov@acmefund.com,,Pharma play - time sensitive,"Elena,
+
+FDA approval coming through for BioMed's drug application. Not announced yet but I got word from inside. This could move 30%+. Act fast.
+
+Rachel",2026-01-05T12:37:00,Client Relations,Trading,INSIDER_TRADING
+ccd7f2df-8412-4a57-a13d-31fbac120c4d,a.foster@acmefund.com,r.kim@acmefund.com,,Conference room booking,"Hi,
+
+I've booked the large conference room for our team meeting on Tuesday. Calendar invite to follow.
+
+Amanda",2026-01-05T15:52:00,Portfolio Management,Client Relations,CLEAN
+222c1756-42c3-4d7c-9270-fcea9f1930fb,r.kim@acmefund.com,t.grant@acmefund.com,,Office closure reminder - Holiday,"Team,
+
+Just a friendly reminder that the office will be closed next Friday for the holiday. Please plan accordingly.
+
+Regards,
+Rachel",2026-01-05T17:36:00,Client Relations,Legal,CLEAN
+d4106984-cd04-4d69-9f10-ede10c2cbc21,r.hayes@acmefund.com,j.liu@acmefund.com,,Monthly risk report - draft for review,"Hi Jennifer,
+
+Attached is the draft monthly risk report. Please review and send any comments by EOD Wednesday.
+
+Thanks,
+Robert",2026-01-05T22:21:00,Compliance,Compliance,CLEAN
+5d9824d9-dec9-42bb-8d4a-0a9dc73e6a26,a.foster@acmefund.com,t.grant@acmefund.com,,RE: Lunch order for client meeting,"Sounds good. I'll order from the usual place. Can you confirm headcount by noon?
+
+Amanda",2026-01-06T15:37:00,Portfolio Management,Legal,CLEAN
+38989f9c-c1ca-47fd-9bf6-8ea87b63414b,d.park@acmefund.com,a.foster@acmefund.com,,Weekly team sync notes,"Hi all,
+
+Attached are the notes from today's sync. Action items highlighted in yellow.
+
+Thanks,
+David",2026-01-07T14:27:00,Trading,Portfolio Management,CLEAN
+f280d736-3ff4-4a12-a2c3-d7d91468c2c2,m.webb@acmefund.com,t.grant@acmefund.com,,Welcome aboard!,"Hi Thomas,
+
+Welcome to the team! I've set up your onboarding meetings for next week. Please reach out if you have any questions.
+
+Best,
+Marcus",2026-01-08T21:50:00,Research,Legal,CLEAN
+af723965-4139-4c91-96ca-d282615f6e99,k.obrien@acmefund.com,m.torres@acmefund.com,,Side investment opportunity,"Found a great IPO coming up. Going to buy in my wife's account to avoid the disclosure requirements. Let me know if you want details.
+
+Kevin",2026-01-09T08:06:00,Operations,Portfolio Management,PERSONAL_TRADING
+e1928536-8531-48a5-8faf-643775037c28,s.chen@acmefund.com,t.grant@acmefund.com,,Updated compliance training schedule,"All,
+
+The annual compliance training has been rescheduled to next Monday. Please block your calendars from 10am-12pm.
+
+Best,
+Sarah",2026-01-09T09:10:00,Research,Legal,CLEAN
+b5f50b70-532b-492e-be35-bcefea5d27eb,a.bell@acmefund.com,j.morrison@acmefund.com,e.volkov@acmefund.com,Conference room booking,"Hi,
+
+I've booked the large conference room for our team meeting on Tuesday. Calendar invite to follow.
+
+Andrew",2026-01-09T10:43:00,Client Relations,Trading,CLEAN
+43f466c8-1ade-4955-9bdb-ea578de8afd8,m.torres@acmefund.com,d.park@acmefund.com,,My stock picks,"Hey,
+
+I bought a bunch of shares in TechStartup Inc last week in my personal account. Looking good so far! You should get in before it pops.
+
+Michael",2026-01-10T07:47:00,Portfolio Management,Trading,PERSONAL_TRADING
+adb23404-5509-4376-8059-3bc7dfeb100b,t.grant@acmefund.com,d.park@acmefund.com,,Monthly risk report - draft for review,"Hi David,
+
+Attached is the draft monthly risk report. Please review and send any comments by EOD Wednesday.
+
+Thanks,
+Thomas",2026-01-10T13:53:00,Legal,Trading,CLEAN
+c635f799-d246-4fcd-9a68-b1ae85971cc9,t.grant@acmefund.com,a.foster@acmefund.com,,RE: Lunch order for client meeting,"Sounds good. I'll order from the usual place. Can you confirm headcount by noon?
+
+Thomas",2026-01-11T11:53:00,Legal,Portfolio Management,CLEAN
+f558c494-1243-4756-926e-1f107afc3222,k.obrien@acmefund.com,r.kim@acmefund.com,,System maintenance notification,"Team,
+
+IT has scheduled system maintenance for Saturday 2am-6am. Trading systems will be unavailable during this window.
+
+Please plan accordingly.
+Kevin",2026-01-11T12:24:00,Operations,Client Relations,CLEAN
+1be637f7-8220-43b8-b415-e251f78af917,p.sharma@acmefund.com,k.obrien@acmefund.com,,Weekly team sync notes,"Hi all,
+
+Attached are the notes from today's sync. Action items highlighted in yellow.
+
+Thanks,
+Priya",2026-01-11T19:10:00,Research,Operations,CLEAN
+53bd0db9-a6c9-40dc-bd73-ce423355ea5d,j.morrison@acmefund.com,e.volkov@acmefund.com,,Welcome aboard!,"Hi Elena,
+
+Welcome to the team! I've set up your onboarding meetings for next week. Please reach out if you have any questions.
+
+Best,
+James",2026-01-11T19:35:00,Trading,Trading,CLEAN
+5fbc7e5d-4a30-4435-aca4-daa2ad53d868,d.park@acmefund.com,e.volkov@acmefund.com,,Office closure reminder - Holiday,"Team,
+
+Just a friendly reminder that the office will be closed next Friday for the holiday. Please plan accordingly.
+
+Regards,
+David",2026-01-11T21:40:00,Trading,Trading,CLEAN
+219e883a-2cfe-40a0-b462-607a51cf1cf2,t.grant@acmefund.com,m.torres@acmefund.com,,RE: Vacation request,"Approved. Enjoy your time off!
+
+Thomas",2026-01-12T08:01:00,Legal,Portfolio Management,CLEAN
+b3f1a4b4-6a26-45d9-b3ca-b56f249b2623,m.torres@acmefund.com,j.liu@acmefund.com,t.grant@acmefund.com,Office closure reminder - Holiday,"Team,
+
+Just a friendly reminder that the office will be closed next Friday for the holiday. Please plan accordingly.
+
+Regards,
+Michael",2026-01-12T20:15:00,Portfolio Management,Compliance,CLEAN
+9f79a32e-5c72-4c39-8e31-004d32648801,j.liu@acmefund.com,m.webb@acmefund.com,,Quiet tip,"Don't share this with anyone - GlobalBank is about to announce layoffs and restructuring. Their stock will tank. You didn't hear this from me.
+
+Jennifer",2026-01-13T11:34:00,Compliance,Research,INSIDER_TRADING
+40a60578-07ae-404d-a124-6978474f7e61,k.obrien@acmefund.com,p.sharma@acmefund.com,,Office closure reminder - Holiday,"Team,
+
+Just a friendly reminder that the office will be closed next Friday for the holiday. Please plan accordingly.
+
+Regards,
+Kevin",2026-01-13T14:19:00,Operations,Research,CLEAN
+8041f0ec-1a88-4b99-83b5-c77c8e86ce59,t.grant@acmefund.com,d.park@acmefund.com,,System maintenance notification,"Team,
+
+IT has scheduled system maintenance for Saturday 2am-6am. Trading systems will be unavailable during this window.
+
+Please plan accordingly.
+Thomas",2026-01-13T17:11:00,Legal,Trading,CLEAN
+b1807a51-5ebf-415b-89e5-1866b99e92de,m.torres@acmefund.com,r.kim@acmefund.com,,Conference room booking,"Hi,
+
+I've booked the large conference room for our team meeting on Tuesday. Calendar invite to follow.
+
+Michael",2026-01-15T09:25:00,Portfolio Management,Client Relations,CLEAN
+a8d06f3d-7106-4d30-a057-2f32b761fa19,p.sharma@acmefund.com,a.foster@acmefund.com,,Updated compliance training schedule,"All,
+
+The annual compliance training has been rescheduled to next Monday. Please block your calendars from 10am-12pm.
+
+Best,
+Priya",2026-01-15T12:04:00,Research,Portfolio Management,CLEAN
+5e6af7fc-9893-4a07-9fae-34abbacf545a,p.sharma@acmefund.com,r.kim@acmefund.com,,RE: Market outlook,"Forget the analysis - I have inside info that MegaCorp's CEO is resigning next week. Dump the position before it goes public. This is solid intel.
+
+Priya",2026-01-15T18:01:00,Research,Client Relations,INSIDER_TRADING
+b22b2069-e283-4ccd-9da4-488be85644b9,p.sharma@acmefund.com,l.martinez@acmefund.com,e.volkov@acmefund.com,Updated compliance training schedule,"All,
+
+The annual compliance training has been rescheduled to next Monday. Please block your calendars from 10am-12pm.
+
+Best,
+Priya",2026-01-16T12:07:00,Research,Operations,CLEAN
+3b48b796-343d-43db-95a4-f2c4b0a08043,s.chen@acmefund.com,l.martinez@acmefund.com,,RE: Investment advice,"For my PA, I'm going heavy into crypto this month. Already moved $50k. Don't mention this to compliance - it's under their radar.
+
+Sarah",2026-01-17T12:42:00,Research,Operations,PERSONAL_TRADING
+453bfb39-65ee-4a6b-8a2b-6ec918aea678,s.chen@acmefund.com,k.obrien@acmefund.com,,System maintenance notification,"Team,
+
+IT has scheduled system maintenance for Saturday 2am-6am. Trading systems will be unavailable during this window.
+
+Please plan accordingly.
+Sarah",2026-01-18T14:51:00,Research,Operations,CLEAN
+4538ea94-b9d3-4ff8-9a99-5167b37e0deb,r.hayes@acmefund.com,e.volkov@acmefund.com,,RE: Vacation request,"Approved. Enjoy your time off!
+
+Robert",2026-01-18T17:38:00,Compliance,Trading,CLEAN

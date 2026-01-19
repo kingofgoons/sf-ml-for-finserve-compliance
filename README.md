@@ -2,6 +2,8 @@
 
 An end-to-end demonstration of Snowflake ML capabilities for email surveillance and compliance in financial services.
 
+> **Note:** This session builds on concepts from the GenAI Compliance demo (`GENAI_COMPLIANCE_DEMO`). Here we focus on Snowpark ML, Feature Store, Model Registry, Fine-tuning, and Vector Search at scale.
+
 ---
 
 ## Overview
@@ -23,8 +25,13 @@ This hands-on lab walks through building an intelligent email compliance system 
 - Snowflake account with:
   - Snowpark-enabled warehouse
   - Cortex LLM functions enabled
-  - `ACCOUNTADMIN` or appropriate ML privileges
+  - `ACCOUNTADMIN` access (for initial setup only)
 - Python 3.9+
+
+**Snowflake objects created:**
+- Database: `ML_COMPLIANCE_DEMO`
+- Warehouse: `ML_COMPLIANCE_WH`
+- Role: `ML_COMPLIANCE_RL`
 
 ---
 
