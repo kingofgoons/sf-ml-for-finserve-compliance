@@ -8,13 +8,13 @@ A hands-on demonstration of Snowflake's ML capabilities for hedge fund complianc
 
 ## Performance Results
 
-| Metric | Keyword Baseline | ML + LLM System | Improvement |
-|--------|-----------------|------------------|-------------|
-| **Precision** | 32% | **93%** | +61% |
-| **Recall** | 16% | **80%** | +64% |
-| **F1 Score** | 21% | **86%** | +65% |
+| Metric | Keyword Baseline | ML Only | Hybrid (ML + LLM) |
+|--------|-----------------|---------|-------------------|
+| **Precision** | 32% | 93% | **93%** |
+| **Recall** | 16% | 78% | **82%** |
+| **F1 Score** | 21% | 85% | **87%** |
 
-*Note: Results include ~8% label noise to simulate real-world labeling disagreements*
+*The hybrid system improves recall by 4% by having the LLM analyze uncertain cases, while only processing 2.3% of emails through the LLM.*
 
 ---
 
