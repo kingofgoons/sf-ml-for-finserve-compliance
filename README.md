@@ -2,7 +2,19 @@
 
 ## Email Surveillance Intelligence Demo
 
-A hands-on demonstration of Snowflake's ML capabilities for hedge fund compliance teams. This demo shows how to build an intelligent email surveillance system that combines traditional ML, LLMs, fine-tuning, and vector search.
+A hands-on demonstration of Snowflake's ML capabilities for hedge fund compliance teams. This demo shows how to build an intelligent email surveillance system that combines semantic embeddings, ML classification, LLMs, fine-tuning, and vector search.
+
+---
+
+## Performance Results
+
+| Metric | Keyword Baseline | ML + LLM System | Improvement |
+|--------|-----------------|------------------|-------------|
+| **Precision** | 32% | **93%** | +61% |
+| **Recall** | 16% | **80%** | +64% |
+| **F1 Score** | 21% | **86%** | +65% |
+
+*Note: Results include ~8% label noise to simulate real-world labeling disagreements*
 
 ---
 
@@ -18,12 +30,7 @@ A hands-on demonstration of Snowflake's ML capabilities for hedge fund complianc
 
 1. **Configure Snowflake connection:**
    ```bash
-   # Option A: Use your existing config
    # Your ~/.snowflake/config.toml will be used automatically
-   
-   # Option B: Create a local config for this demo
-   cp snowflake.config.template snowflake.config
-   # Edit snowflake.config with your credentials
    ```
 
 2. **Install dependencies:**
@@ -41,7 +48,7 @@ A hands-on demonstration of Snowflake's ML capabilities for hedge fund complianc
    python scripts/setup_snowflake.py
    ```
 
-5. **Run the notebooks in order** (01 through 06)
+5. **Run the demo notebooks in order** (DEMO_00 through DEMO_08)
 
 ---
 
@@ -49,92 +56,116 @@ A hands-on demonstration of Snowflake's ML capabilities for hedge fund complianc
 
 ```
 sf-ml-for-finserve-compliance/
-├── README.md                       # This file
-├── requirements.txt                # Python dependencies
-├── snowflake.config.template       # Config template (safe to commit)
-├── snowflake.config                # Your config (gitignored)
+├── README.md                       
+├── requirements.txt                
 │
 ├── scripts/
 │   ├── generate_data.py            # Generate 10K emails + 500 fine-tune samples
 │   └── setup_snowflake.py          # Push data to Snowflake
 │
 ├── notebooks/
-│   ├── 00_setup.sql                # Create DB, schema, warehouse
-│   ├── 01_data_exploration.ipynb   # Explore email dataset
-│   ├── 02_feature_engineering.ipynb # Feature Store setup
-│   ├── 03_model_training.ipynb     # XGBoost + Model Registry
-│   ├── 04_ml_llm_integration.ipynb # ML + Claude claude-opus-4-5 architecture
-│   ├── 05_fine_tuning.ipynb        # Fine-tune LLM for compliance
-│   ├── 06_vector_search.ipynb      # Arctic Embed + semantic search
-│   └── 99_cleanup.sql              # Remove demo objects
+│   ├── DEMO_00_the_pain.ipynb      # Keyword baseline (the problem)
+│   ├── DEMO_01_blueprint.ipynb     # Architecture overview
+│   ├── DEMO_02_layer1_features.ipynb   # Semantic feature engineering
+│   ├── DEMO_03_layer2_ml_model.ipynb   # XGBoost + Model Registry
+│   ├── DEMO_04_layer3_llm_analysis.ipynb   # Claude deep analysis
+│   ├── DEMO_05_layer4_hybrid.ipynb     # ML + LLM pipeline
+│   ├── DEMO_06_layer5_finetuning.ipynb # Fine-tune for compliance
+│   ├── DEMO_07_layer6_semantic_search.ipynb # Cortex Search
+│   └── DEMO_08_resolution.ipynb    # Summary & results
 │
 ├── data/
 │   ├── emails_synthetic.csv        # 10K synthetic emails
 │   └── finetune_training.jsonl     # 500 labeled training samples
 │
-└── src_archive/                    # Original files (reference only)
+└── src_archive/                    # Original reference files
 ```
 
 ---
 
 ## Demo Flow
 
-### Part 1: The ML Foundation
+### The Pain (DEMO_00)
+Shows why keyword-based compliance fails:
+- 32% precision (68% false alarms)
+- 16% recall (misses 84% of violations)
+- Compliance teams drowning in noise
 
-| Notebook | Focus | Snowflake Features |
-|----------|-------|--------------------|
-| 01_data_exploration | Understand the data | Basic SQL, aggregations |
-| 02_feature_engineering | Build reusable features | Feature Store, Entity, FeatureView |
-| 03_model_training | Train & deploy models | XGBClassifier, Model Registry |
+### The Solution (DEMO_01-08)
 
-### Part 2: The Integration
-
-| Notebook | Focus | Snowflake Features |
-|----------|-------|--------------------|
-| 04_ml_llm_integration | Optimal architecture | CORTEX.COMPLETE (Claude claude-opus-4-5), tiered approach |
-
-### Part 3: Advanced Capabilities
-
-| Notebook | Focus | Snowflake Features |
-|----------|-------|--------------------|
-| 05_fine_tuning | Custom LLM | CORTEX.FINETUNE |
-| 06_vector_search | Semantic search | EMBED_TEXT_768 (Arctic), VECTOR_COSINE_SIMILARITY |
+| Demo | Layer | Focus | Snowflake Features |
+|------|-------|-------|--------------------|
+| 01 | - | Architecture blueprint | Conceptual overview |
+| 02 | 1 | Semantic features | Cortex Embeddings, VECTOR type |
+| 03 | 2 | ML classification | Feature Store, Model Registry, XGBoost |
+| 04 | 3 | LLM deep analysis | CORTEX.COMPLETE (Claude) |
+| 05 | 4 | Hybrid pipeline | ML filter + LLM reasoning |
+| 06 | 5 | Fine-tuning | CORTEX.FINETUNE |
+| 07 | 6 | Semantic search | Cortex Search Service |
+| 08 | - | Resolution | Full system summary |
 
 ---
 
 ## The Dataset
 
-**10,000 synthetic hedge fund emails** with compliance labels:
+**10,000 synthetic hedge fund emails** with realistic noise:
 
-| Label | Count | Description |
-|-------|-------|-------------|
-| CLEAN | ~70% | Normal business communications |
+| Label | Distribution | Description |
+|-------|-------------|-------------|
+| CLEAN | ~67% | Normal business communications |
 | INSIDER_TRADING | ~8% | MNPI sharing, trading tips |
-| CONFIDENTIALITY_BREACH | ~8% | Client data leaks |
-| PERSONAL_TRADING | ~7% | Undisclosed personal trades |
-| INFO_BARRIER_VIOLATION | ~7% | Research↔Trading wall breaches |
+| CONFIDENTIALITY_BREACH | ~9% | Client data leaks |
+| PERSONAL_TRADING | ~8% | Undisclosed personal trades |
+| INFO_BARRIER_VIOLATION | ~8% | Research/Trading wall breaches |
+
+**Data includes:**
+- Subtle violations (not obvious language)
+- Borderline clean emails (discuss sensitive topics legitimately)
+- ~8% label noise (simulates real-world labeling disagreements)
 
 ---
 
-## Key Snowflake Features Demonstrated
+## Key Innovation: Semantic Risk Features
 
-### Snowpark ML
-- **Feature Store:** Reusable, versioned feature engineering
-- **Model Registry:** Version-controlled model deployment
-- **XGBClassifier:** Native gradient boosting
+Instead of keyword matching, we measure **semantic distance** from risk concepts:
 
-### Cortex AI
-- **COMPLETE:** LLM inference with Claude claude-opus-4-5
-- **FINETUNE:** Custom model training
-- **EMBED_TEXT_768:** Vector embeddings with Arctic Embed
+```python
+BASELINE_CONCEPT = "quarterly report meeting schedule project update..."
 
-### Vector Search
-- **VECTOR type:** Native 768-dim vector storage
-- **VECTOR_COSINE_SIMILARITY:** Semantic similarity search
+RISK_CONCEPTS = {
+    'SECRECY': "keep this secret between us, do not tell anyone...",
+    'URGENCY': "act before the announcement, move now before news...",
+    'INSIDER': "inside information about merger, non-public material...",
+    'EVASION': "delete this email, destroy evidence, cover our tracks...",
+    'TIPPING': "buy this stock now, guaranteed profit, act on this tip..."
+}
+
+# Relative risk score = risk_similarity - baseline_similarity
+# Negative = normal business email
+# Positive = elevated risk
+```
+
+This captures **meaning, not keywords** - violators can change vocabulary but meaning still clusters near risk concepts.
 
 ---
 
-## Architecture Overview
+## Snowflake Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| **Cortex Embeddings** | EMBED_TEXT_768 with Arctic Embed M |
+| **VECTOR type** | Native 768-dim vector storage |
+| **VECTOR_COSINE_SIMILARITY** | Semantic similarity calculation |
+| **Feature Store** | Versioned, auto-refreshing features |
+| **Model Registry** | Versioned ML model deployment |
+| **XGBClassifier** | Gradient boosting classification |
+| **CORTEX.COMPLETE** | LLM inference (Claude) |
+| **CORTEX.FINETUNE** | Custom model training |
+| **Cortex Search Service** | Self-maintaining semantic search |
+
+---
+
+## Architecture
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
@@ -143,20 +174,27 @@ sf-ml-for-finserve-compliance/
                              │
                              ▼
 ┌──────────────────────────────────────────────────────────────────┐
-│  TIER 1: ML CLASSIFIER (XGBoost)                                 │
+│  LAYER 1: SEMANTIC FEATURES                                      │
+│  └── Embed emails with Arctic Embed M                            │
+│  └── Compute relative risk scores vs baseline                    │
+└────────────────────────────┬─────────────────────────────────────┘
+                             │
+                             ▼
+┌──────────────────────────────────────────────────────────────────┐
+│  LAYER 2: ML CLASSIFIER (XGBoost)                                │
+│  └── 93% precision, 80% recall, 86% F1                           │
 │  └── Fast (~5ms), cheap (~$0.0001/email)                         │
-│  └── Catches obvious violations                                  │
 └────────────────────────────┬─────────────────────────────────────┘
                              │
               ┌──────────────┴──────────────┐
               │                             │
-         ~85% CLEAN                    ~15% FLAGGED
-         (no action)                        │
+         ~55% AUTO-CLEARED             ~45% FLAGGED
+         (low risk)                         │
                                             ▼
 ┌──────────────────────────────────────────────────────────────────┐
-│  TIER 2: LLM ANALYSIS (Claude claude-opus-4-5)                            │
-│  └── Smart (~200ms), more expensive (~$0.01/email)               │
-│  └── Deep reasoning, nuanced detection                           │
+│  LAYER 3: LLM ANALYSIS (Claude)                                  │
+│  └── Deep reasoning with natural language explanation            │
+│  └── Categorizes violation type with confidence                  │
 └────────────────────────────┬─────────────────────────────────────┘
                              │
               ┌──────────────┴──────────────┐
@@ -165,7 +203,7 @@ sf-ml-for-finserve-compliance/
        (auto-close)                  (human review)
 ```
 
-**Result:** 90% cost reduction vs all-LLM while maintaining accuracy.
+**Result:** ~55% cost reduction vs all-LLM while maintaining accuracy.
 
 ---
 
@@ -174,8 +212,6 @@ sf-ml-for-finserve-compliance/
 After the demo, remove all objects:
 
 ```sql
--- Run notebooks/99_cleanup.sql
--- Or manually:
 DROP DATABASE IF EXISTS COMPLIANCE_DEMO CASCADE;
 DROP WAREHOUSE IF EXISTS COMPLIANCE_DEMO_WH;
 ```
@@ -184,9 +220,10 @@ DROP WAREHOUSE IF EXISTS COMPLIANCE_DEMO_WH;
 
 ## Notes
 
-- **Fine-tuning:** The FINETUNE job in notebook 05 is async and may take 30+ minutes
-- **Embeddings:** Generating 10K embeddings in notebook 06 takes a few minutes
-- **Costs:** Demo uses MEDIUM warehouse; adjust as needed for your account
+- **Semantic features:** Computing embeddings for 10K emails takes ~30 seconds
+- **Fine-tuning:** The FINETUNE job is async and takes 30-60 minutes
+- **Cortex Search:** Service indexing may take a few minutes after creation
+- **Label noise:** 8% of labels are intentionally flipped to create realistic ML performance
 
 ---
 
