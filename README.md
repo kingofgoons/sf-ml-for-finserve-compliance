@@ -9,12 +9,12 @@ A hands-on demonstration of Snowflake's ML capabilities for hedge fund complianc
 ## Performance Results
 
 | Metric | Keyword Baseline | ML Only | Hybrid (ML + LLM) |
-|--------|-----------------|---------|-------------------|
-| **Precision** | 32% | 93% | **93%** |
-| **Recall** | 16% | 78% | **82%** |
-| **F1 Score** | 21% | 85% | **87%** |
+|--------|------------------|---------|-------------------|
+| **Precision** | ~38% | ~91% | **~91%** |
+| **Recall** | ~67% | ~54% | **~85%** |
+| **F1 Score** | ~49% | ~68% | **~88%** |
 
-*The hybrid system improves recall by 4% by having the LLM analyze uncertain cases, while only processing 2.3% of emails through the LLM.*
+*The key insight: ML handles clear-cut cases (HIGH_RISK and LOW_RISK) while the LLM focuses on the uncertain NEEDS_REVIEW bucket where it adds the most value. This targeted approach improves recall by ~31% while only processing 21.2% of emails through the LLM.*
 
 ---
 
@@ -38,9 +38,9 @@ A hands-on demonstration of Snowflake's ML capabilities for hedge fund complianc
    pip install -r requirements.txt
    ```
 
-3. **Generate demo data:**
+3. **Generate demo data (LLM-powered):**
    ```bash
-   python scripts/generate_data.py
+   python scripts/generate_data_llm.py
    ```
 
 4. **Push data to Snowflake:**
@@ -57,28 +57,29 @@ A hands-on demonstration of Snowflake's ML capabilities for hedge fund complianc
 ```
 sf-ml-for-finserve-compliance/
 ├── README.md                       
+├── TALK_TRACK.md               # Demo presentation notes
 ├── requirements.txt                
+├── snowflake.config.template   # Config template
 │
 ├── scripts/
-│   ├── generate_data.py            # Generate 10K emails + 500 fine-tune samples
-│   └── setup_snowflake.py          # Push data to Snowflake
+│   ├── generate_data_llm.py    # Generate 10K emails via Cortex LLM
+│   ├── setup_snowflake.py      # Create DB/schemas and load data
+│   └── retrain_model.py        # Retrain ML model if needed
 │
 ├── notebooks/
-│   ├── DEMO_00_the_pain.ipynb      # Keyword baseline (the problem)
-│   ├── DEMO_01_blueprint.ipynb     # Architecture overview
+│   ├── DEMO_00_the_pain.ipynb          # Keyword baseline (the problem)
+│   ├── DEMO_01_blueprint.ipynb         # Architecture overview
 │   ├── DEMO_02_layer1_features.ipynb   # Semantic feature engineering
 │   ├── DEMO_03_layer2_ml_model.ipynb   # XGBoost + Model Registry
 │   ├── DEMO_04_layer3_llm_analysis.ipynb   # Claude deep analysis
-│   ├── DEMO_05_layer4_hybrid.ipynb     # ML + LLM pipeline
+│   ├── DEMO_05_layer4_hybrid.ipynb     # ML + LLM pipeline metrics
 │   ├── DEMO_06_layer5_finetuning.ipynb # Fine-tune for compliance
 │   ├── DEMO_07_layer6_semantic_search.ipynb # Cortex Search
-│   └── DEMO_08_resolution.ipynb    # Summary & results
+│   └── DEMO_08_resolution.ipynb        # Summary & results
 │
-├── data/
-│   ├── emails_synthetic.csv        # 10K synthetic emails
-│   └── finetune_training.jsonl     # 500 labeled training samples
-│
-└── src_archive/                    # Original reference files
+└── data/
+    ├── emails_synthetic.csv        # 10K synthetic emails
+    └── finetune_training.jsonl     # Labeled training samples
 ```
 
 ---
@@ -87,8 +88,8 @@ sf-ml-for-finserve-compliance/
 
 ### The Pain (DEMO_00)
 Shows why keyword-based compliance fails:
-- 32% precision (68% false alarms)
-- 16% recall (misses 84% of violations)
+- ~38% precision (lots of false alarms)
+- ~67% recall (misses violations with subtle language)
 - Compliance teams drowning in noise
 
 ### The Solution (DEMO_01-08)
@@ -96,10 +97,10 @@ Shows why keyword-based compliance fails:
 | Demo | Layer | Focus | Snowflake Features |
 |------|-------|-------|--------------------|
 | 01 | - | Architecture blueprint | Conceptual overview |
-| 02 | 1 | Semantic features | Cortex Embeddings, VECTOR type |
-| 03 | 2 | ML classification | Feature Store, Model Registry, XGBoost |
+| 02 | 1 | Semantic features | Cortex Embeddings, Feature Store |
+| 03 | 2 | ML classification | Model Registry, XGBoost |
 | 04 | 3 | LLM deep analysis | CORTEX.COMPLETE (Claude) |
-| 05 | 4 | Hybrid pipeline | ML filter + LLM reasoning |
+| 05 | 4 | Hybrid pipeline | Three-way classification metrics |
 | 06 | 5 | Fine-tuning | CORTEX.FINETUNE |
 | 07 | 6 | Semantic search | Cortex Search Service |
 | 08 | - | Resolution | Full system summary |
@@ -108,7 +109,7 @@ Shows why keyword-based compliance fails:
 
 ## The Dataset
 
-**10,000 synthetic hedge fund emails** with realistic noise:
+**10,000 synthetic hedge fund emails** generated via Cortex LLM with realistic variation:
 
 | Label | Distribution | Description |
 |-------|-------------|-------------|
@@ -118,10 +119,10 @@ Shows why keyword-based compliance fails:
 | PERSONAL_TRADING | ~8% | Undisclosed personal trades |
 | INFO_BARRIER_VIOLATION | ~8% | Research/Trading wall breaches |
 
-**Data includes:**
+**Data characteristics:**
+- LLM-generated with unique variation seeds (93%+ unique subjects)
 - Subtle violations (not obvious language)
 - Borderline clean emails (discuss sensitive topics legitimately)
-- ~8% label noise (simulates real-world labeling disagreements)
 
 ---
 
@@ -129,23 +130,30 @@ Shows why keyword-based compliance fails:
 
 Instead of keyword matching, we measure **semantic distance** from risk concepts:
 
-```python
-BASELINE_CONCEPT = "quarterly report meeting schedule project update..."
-
-RISK_CONCEPTS = {
-    'SECRECY': "keep this secret between us, do not tell anyone...",
-    'URGENCY': "act before the announcement, move now before news...",
-    'INSIDER': "inside information about merger, non-public material...",
-    'EVASION': "delete this email, destroy evidence, cover our tracks...",
-    'TIPPING': "buy this stock now, guaranteed profit, act on this tip..."
-}
-
-# Relative risk score = risk_similarity - baseline_similarity
-# Negative = normal business email
-# Positive = elevated risk
-```
+| Feature | Description |
+|---------|-------------|
+| BASELINE_SIMILARITY | Distance to normal business language |
+| MNPI_RISK_SCORE | Similarity to insider trading language |
+| CONFIDENTIALITY_RISK_SCORE | Similarity to data leak language |
+| PERSONAL_TRADING_RISK_SCORE | Similarity to personal trading language |
+| INFO_BARRIER_RISK_SCORE | Similarity to wall-crossing language |
+| CROSS_BARRIER_FLAG | Research↔Trading department indicator |
 
 This captures **meaning, not keywords** - violators can change vocabulary but meaning still clusters near risk concepts.
+
+---
+
+## Three-Way Classification
+
+The ML model outputs probability scores that drive a three-way decision:
+
+| ML Decision | Threshold | Action |
+|-------------|-----------|--------|
+| **HIGH_RISK** | probability >= 0.7 | Auto-flag for review |
+| **NEEDS_REVIEW** | 0.3 < probability < 0.7 | Send to LLM for analysis |
+| **LOW_RISK** | probability <= 0.3 | Auto-clear |
+
+This tiered approach means the LLM only processes ~21% of emails (the uncertain middle), dramatically reducing cost while improving recall.
 
 ---
 
@@ -165,48 +173,6 @@ This captures **meaning, not keywords** - violators can change vocabulary but me
 
 ---
 
-## Architecture
-
-```
-┌──────────────────────────────────────────────────────────────────┐
-│                     10,000 emails/day                            │
-└────────────────────────────┬─────────────────────────────────────┘
-                             │
-                             ▼
-┌──────────────────────────────────────────────────────────────────┐
-│  LAYER 1: SEMANTIC FEATURES                                      │
-│  └── Embed emails with Arctic Embed M                            │
-│  └── Compute relative risk scores vs baseline                    │
-└────────────────────────────┬─────────────────────────────────────┘
-                             │
-                             ▼
-┌──────────────────────────────────────────────────────────────────┐
-│  LAYER 2: ML CLASSIFIER (XGBoost)                                │
-│  └── 93% precision, 80% recall, 86% F1                           │
-│  └── Fast (~5ms), cheap (~$0.0001/email)                         │
-└────────────────────────────┬─────────────────────────────────────┘
-                             │
-              ┌──────────────┴──────────────┐
-              │                             │
-         ~55% AUTO-CLEARED             ~45% FLAGGED
-         (low risk)                         │
-                                            ▼
-┌──────────────────────────────────────────────────────────────────┐
-│  LAYER 3: LLM ANALYSIS (Claude)                                  │
-│  └── Deep reasoning with natural language explanation            │
-│  └── Categorizes violation type with confidence                  │
-└────────────────────────────┬─────────────────────────────────────┘
-                             │
-              ┌──────────────┴──────────────┐
-              │                             │
-         LOW RISK                     HIGH RISK
-       (auto-close)                  (human review)
-```
-
-**Result:** ~55% cost reduction vs all-LLM while maintaining accuracy.
-
----
-
 ## Cleanup
 
 After the demo, remove all objects:
@@ -220,10 +186,10 @@ DROP WAREHOUSE IF EXISTS COMPLIANCE_DEMO_WH;
 
 ## Notes
 
-- **Semantic features:** Computing embeddings for 10K emails takes ~30 seconds
+- **Data generation:** Uses Cortex LLM batch SQL for realistic, unique emails
+- **Semantic features:** Computing embeddings for 10K emails takes ~2-3 minutes
 - **Fine-tuning:** The FINETUNE job is async and takes 30-60 minutes
 - **Cortex Search:** Service indexing may take a few minutes after creation
-- **Label noise:** 8% of labels are intentionally flipped to create realistic ML performance
 
 ---
 
