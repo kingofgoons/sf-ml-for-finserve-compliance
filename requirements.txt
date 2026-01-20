@@ -1,0 +1,13 @@
+# Snowflake ML Compliance Demo - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Snowflake Snowpark and ML
+snowflake-snowpark-python>=1.11.0
+snowflake-ml-python>=1.5.0
+
+# For local development and testing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Rich output for scripts
+rich>=13.0.0

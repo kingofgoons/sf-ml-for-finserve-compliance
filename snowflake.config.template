@@ -1,0 +1,23 @@
+# Snowflake Connection Configuration Template
+# ============================================
+# 
+# Copy this file to snowflake.config and fill in your values:
+#   cp snowflake.config.template snowflake.config
+#
+# The snowflake.config file is gitignored - never commit credentials.
+#
+# Alternatively, you can use your existing ~/.snowflake/config.toml
+# by leaving this file empty - the setup script will fall back to it.
+
+[connections.default]
+account = "your_account_identifier"      # e.g., "abc12345.us-east-1"
+user = "your_username"
+authenticator = "externalbrowser"        # Options: externalbrowser, snowflake, oauth
+# password = "your_password"             # Only if authenticator = snowflake
+# private_key_path = "/path/to/key.p8"   # For key-pair auth
+
+# Demo-specific settings (these will be created by the setup script)
+warehouse = "COMPLIANCE_DEMO_WH"
+database = "COMPLIANCE_DEMO"
+schema = "EMAIL_SURVEILLANCE"
+role = "ACCOUNTADMIN"                    # Or a role with CREATE DATABASE privileges

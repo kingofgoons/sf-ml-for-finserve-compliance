@@ -20,18 +20,18 @@ env/
 secrets.toml
 .streamlit/secrets.toml
 snowflake_credentials.json
+snowflake.config
 
 # OS
 .DS_Store
 Thumbs.db
 
 # Data artifacts (generated files - run scripts/generate_data.py locally)
+# Note: We keep emails_synthetic.csv for demo handoff
 *.parquet
-*.csv
 
 # Jupyter
 .ipynb_checkpoints/
 
 # References (local only)
 references/
-
