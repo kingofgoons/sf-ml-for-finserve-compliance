@@ -1,243 +1,198 @@
-# Hedge Fund Email Compliance Intelligence Platform
+# ML for Financial Services Compliance
 
-An end-to-end demonstration of Snowflake ML capabilities for email surveillance and compliance in financial services.
+## Email Surveillance Intelligence Demo
 
-> **Note:** This session builds on concepts from the GenAI Compliance demo (`GENAI_COMPLIANCE_DEMO`). Here we focus on Snowpark ML, Feature Store, Model Registry, Fine-tuning, and Vector Search at scale.
-
----
-
-## Overview
-
-This hands-on lab walks through building an intelligent email compliance system using Snowflake's ML infrastructure. The demo covers:
-
-- **Email data processing** with Snowpark
-- **Feature engineering** for communication risk signals
-- **Model management** via Feature Store & Model Registry
-- **LLM integration** for automated compliance scoring
-- **Vector search** for semantic pattern detection
-
-**Total demo time:** ~35-40 minutes of code execution + discussion
+A hands-on demonstration of Snowflake's ML capabilities for hedge fund compliance teams. This demo shows how to build an intelligent email surveillance system that combines semantic embeddings, ML classification, LLMs, fine-tuning, and vector search.
 
 ---
 
-## Prerequisites
+## Performance Results
 
-- Snowflake account with:
-  - Snowpark-enabled warehouse
-  - Cortex LLM functions enabled
-  - `ACCOUNTADMIN` access (for initial setup only)
+| Metric | Keyword Baseline | ML Only | Hybrid (ML + LLM) |
+|--------|------------------|---------|-------------------|
+| **Precision** | ~38% | ~91% | **~91%** |
+| **Recall** | ~67% | ~54% | **~85%** |
+| **F1 Score** | ~49% | ~68% | **~88%** |
 
-**Snowflake objects created:**
-- Database: `ML_COMPLIANCE_DEMO`
-- Warehouse: `ML_COMPLIANCE_WH`
-- Role: `ML_COMPLIANCE_RL`
-
-**All code runs inside Snowsight** (SQL Worksheets, Python Worksheets, or Notebooks).
-
----
-
-## Project Structure
-
-```
-├── src/
-│   ├── 00_setup.sql                         # Snowflake object setup
-│   ├── 01_snowpark_email_processing.py      # Part 1.1
-│   ├── 02_feature_store_setup.py            # Part 1.2
-│   ├── 03_model_registry.py                 # Part 1.3
-│   ├── 04_model_benchmarking.py             # Part 2.1
-│   ├── 05_llm_compliance_pipeline.py        # Part 2.2
-│   ├── 06_fine_tuning.py                    # Part 2.3
-│   ├── 07_vector_search.py                  # Part 3.1
-│   ├── 08_pattern_evolution.py              # Part 3.2
-│   └── 99_reset.sql                         # Cleanup for re-runs
-├── data/
-│   └── emails_synthetic.csv                 # Generated mock email data
-├── scripts/
-│   └── generate_data.py                     # Synthetic data generator
-└── assets/
-    └── (diagrams, screenshots)
-```
-
----
-
-## Part 1: ML Infrastructure & Email Compliance Workflows
-
-> **Time:** 12-15 minutes
-
-### Step 1.1 — Snowpark Basics for Email Data Processing
-
-**Goal:** Load and process email archive data using Snowpark DataFrames.
-
-- Connect to Snowflake, load synthetic email data
-- DataFrame operations: sender/recipient analysis, temporal patterns
-- Create processing UDFs for message metadata extraction
-
-**Key Snowflake features:** Snowpark Python, UDFs
-
-### Step 1.2 — Feature Store for Communication Risk Features
-
-**Goal:** Build reusable features for email surveillance models.
-
-- Define communication risk features (message frequency, after-hours activity, cross-department communication)
-- Create Feature Store entities and feature views
-- Generate training datasets from feature pipelines
-
-**Key Snowflake features:** Feature Store, Feature Views
-
-### Step 1.3 — Model Registry & Custom Classification Models
-
-**Goal:** Register and version email classification models.
-
-- Train a simple compliance classifier (XGBoost via Snowpark ML)
-- Register model in Snowflake Model Registry
-- Deploy model for inference
-- **Upload custom Hugging Face embedding models** to Snowflake stages
-- Create UDFs that use custom models
-
-**Key Snowflake features:** Model Registry, Custom UDFs, Stage-based model deployment
-
----
-
-## Part 2: Model Performance & Email Intelligence Integration
-
-> **Time:** 12-15 minutes
-
-### Step 2.1 — Email Surveillance Model Benchmarking
-
-**Goal:** Compare detection approaches and model performance.
-
-- Keyword-based rules vs ML-based detection
-- **Snowflake in-house models vs frontier models** (mistral-7b vs mistral-large2)
-- Compare precision, recall, false positive rates, and cost
-- Model selection guide for different use cases
-
-**Key Snowflake features:** Cortex LLM functions, model evaluation
-
-### Step 2.2 — LLM-to-Email Compliance Integration
-
-**Goal:** Chain LLM analysis into structured compliance workflows.
-
-- Use `AI_CLASSIFY` for email categorization
-- Use `AI_COMPLETE` for extracting structured compliance signals
-- **Parse LLM JSON output → feed as parameters to Snowpark Python UDFs**
-- Build end-to-end pipeline: LLM extraction → Python business logic → actions
-- Ensemble approaches (ML + LLM)
-
-**Key Snowflake features:** AI_CLASSIFY, AI_COMPLETE, PARSE_JSON, Snowpark UDFs
-
-### Step 2.3 — Fine-Tuning for Financial Communication Language
-
-**Goal:** Customize models for hedge fund terminology.
-
-- Prepare fine-tuning dataset with fund-specific examples
-- Run `CORTEX.FINETUNE` job
-- Evaluate fine-tuned model vs base model
-
-**Key Snowflake features:** Cortex Fine-tuning
-
----
-
-## Part 3: Vector Search for Email Intelligence
-
-> **Time:** 8-10 minutes
-
-### Step 3.1 — Email Content Search & Pattern Recognition
-
-**Goal:** Enable semantic search across email archives.
-
-- Generate embeddings with `AI_EMBED`
-- Create Cortex Search service
-- Demo: "Find emails similar to this compliance violation"
-
-**Key Snowflake features:** AI_EMBED, Cortex Search
-
-### Step 3.2 — Communication Pattern Evolution & Model Updates
-
-**Goal:** Maintain models as communication patterns change.
-
-- Batch re-embedding workflow
-- A/B testing between model versions
-- Performance validation framework
-
-**Key Snowflake features:** Cortex Search multi-indexing
-
----
-
-## Compliance Use Cases Demonstrated
-
-| Use Case | What We Detect |
-|----------|----------------|
-| **Insider Trading Prevention** | MNPI sharing, trading discussions before blackouts |
-| **Information Barriers** | Cross-departmental leaks, conflict of interest |
-| **Personal Trading Compliance** | Personal investment discussions, pre-clearance violations |
-| **Client Confidentiality** | Unauthorized client info sharing, data leakage |
+*The key insight: ML handles clear-cut cases (HIGH_RISK and LOW_RISK) while the LLM focuses on the uncertain NEEDS_REVIEW bucket where it adds the most value. This targeted approach improves recall by ~31% while only processing 21.2% of emails through the LLM.*
 
 ---
 
 ## Quick Start
 
-All code runs inside **Snowsight** — no local Python environment needed.
+### Prerequisites
 
-### 1. Generate synthetic data (one-time, locally)
-```bash
-python scripts/generate_data.py
+- Snowflake account with Cortex enabled
+- Python 3.9+ with Snowpark
+- Role with CREATE DATABASE/WAREHOUSE privileges
+
+### Setup
+
+1. **Configure Snowflake connection:**
+   ```bash
+   # Your ~/.snowflake/config.toml will be used automatically
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Generate demo data (LLM-powered):**
+   ```bash
+   python scripts/generate_data_llm.py
+   ```
+
+4. **Push data to Snowflake:**
+   ```bash
+   python scripts/setup_snowflake.py
+   ```
+
+5. **Run the demo notebooks in order** (DEMO_00 through DEMO_08)
+
+---
+
+## Repository Structure
+
+```
+sf-ml-for-finserve-compliance/
+├── README.md                       
+├── TALK_TRACK.md               # Demo presentation notes
+├── requirements.txt                
+├── snowflake.config.template   # Config template
+│
+├── scripts/
+│   ├── generate_data_llm.py    # Generate 10K emails via Cortex LLM
+│   ├── setup_snowflake.py      # Create DB/schemas and load data
+│   └── retrain_model.py        # Retrain ML model if needed
+│
+├── notebooks/
+│   ├── DEMO_00_the_pain.ipynb          # Keyword baseline (the problem)
+│   ├── DEMO_01_blueprint.ipynb         # Architecture overview
+│   ├── DEMO_02_layer1_features.ipynb   # Semantic feature engineering
+│   ├── DEMO_03_layer2_ml_model.ipynb   # XGBoost + Model Registry
+│   ├── DEMO_04_layer3_llm_analysis.ipynb   # Claude deep analysis
+│   ├── DEMO_05_layer4_hybrid.ipynb     # ML + LLM pipeline metrics
+│   ├── DEMO_06_layer5_finetuning.ipynb # Fine-tune for compliance
+│   ├── DEMO_07_layer6_semantic_search.ipynb # Cortex Search
+│   └── DEMO_08_resolution.ipynb        # Summary & results
+│
+└── data/
+    ├── emails_synthetic.csv        # 10K synthetic emails
+    └── finetune_training.jsonl     # Labeled training samples
 ```
 
-### 2. Run setup in Snowsight
-1. Open **Snowsight** → **Worksheets** → **+ SQL Worksheet**
-2. Copy/paste contents of `src/00_setup.sql`
-3. Run all statements
+---
 
-### 3. Upload sample data
-1. Navigate to **Data → Databases → ML_COMPLIANCE_DEMO → RAW_DATA → Stages**
-2. Click on `EMAIL_DATA_STAGE` → **+ Files**
-3. Upload `data/emails_synthetic.csv`
+## Demo Flow
 
-### 4. Walk through each step
-For each `.py` file in `src/`:
-1. Create a **Python Worksheet** or **Notebook** in Snowsight
-2. Copy/paste the file contents
-3. Set context: Database=`ML_COMPLIANCE_DEMO`, Warehouse=`ML_COMPLIANCE_WH`, Role=`ML_COMPLIANCE_RL`
-4. Run cells in order
+### The Pain (DEMO_00)
+Shows why keyword-based compliance fails:
+- ~38% precision (lots of false alarms)
+- ~67% recall (misses violations with subtle language)
+- Compliance teams drowning in noise
 
-### 5. Reset for next demo
-Run `src/99_reset.sql` in a SQL Worksheet.
+### The Solution (DEMO_01-08)
+
+| Demo | Layer | Focus | Snowflake Features |
+|------|-------|-------|--------------------|
+| 01 | - | Architecture blueprint | Conceptual overview |
+| 02 | 1 | Semantic features | Cortex Embeddings, Feature Store |
+| 03 | 2 | ML classification | Model Registry, XGBoost |
+| 04 | 3 | LLM deep analysis | CORTEX.COMPLETE (Claude) |
+| 05 | 4 | Hybrid pipeline | Three-way classification metrics |
+| 06 | 5 | Fine-tuning | CORTEX.FINETUNE |
+| 07 | 6 | Semantic search | Cortex Search Service |
+| 08 | - | Resolution | Full system summary |
 
 ---
 
-## Synthetic Data Schema
+## The Dataset
 
-The demo uses generated email data with the following structure:
+**10,000 synthetic hedge fund emails** generated via Cortex LLM with realistic variation:
 
-| Column | Type | Description |
-|--------|------|-------------|
-| `email_id` | STRING | Unique identifier |
-| `sender` | STRING | Sender email address |
-| `recipient` | STRING | Recipient email address |
-| `cc` | STRING | CC recipients (nullable) |
-| `subject` | STRING | Email subject line |
-| `body` | STRING | Email body text |
-| `sent_at` | TIMESTAMP | Send timestamp |
-| `sender_dept` | STRING | Sender's department |
-| `recipient_dept` | STRING | Recipient's department |
-| `compliance_label` | STRING | Ground truth label (for training) |
+| Label | Distribution | Description |
+|-------|-------------|-------------|
+| CLEAN | ~67% | Normal business communications |
+| INSIDER_TRADING | ~8% | MNPI sharing, trading tips |
+| CONFIDENTIALITY_BREACH | ~9% | Client data leaks |
+| PERSONAL_TRADING | ~8% | Undisclosed personal trades |
+| INFO_BARRIER_VIOLATION | ~8% | Research/Trading wall breaches |
 
-**Labels:** `CLEAN`, `INSIDER_TRADING`, `CONFIDENTIALITY_BREACH`, `PERSONAL_TRADING`, `INFO_BARRIER_VIOLATION`
+**Data characteristics:**
+- LLM-generated with unique variation seeds (93%+ unique subjects)
+- Subtle violations (not obvious language)
+- Borderline clean emails (discuss sensitive topics legitimately)
 
 ---
 
-## References
+## Key Innovation: Semantic Risk Features
 
-- [Snowpark Python UDFs](https://docs.snowflake.com/en/developer-guide/snowpark/python/creating-udfs)
-- [Feature Store Overview](https://docs.snowflake.com/en/developer-guide/snowflake-ml/feature-store/overview)
-- [Model Registry](https://docs.snowflake.com/developer-guide/snowflake-ml/overview)
-- [AI_CLASSIFY](https://docs.snowflake.com/en/sql-reference/functions/ai_classify)
-- [AI_EMBED](https://docs.snowflake.com/en/sql-reference/functions/ai_embed)
-- [Cortex Fine-tuning](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-finetuning)
-- [Cortex Search](https://docs.snowflake.com/en/sql-reference/sql/create-cortex-search)
+Instead of keyword matching, we measure **semantic distance** from risk concepts:
+
+| Feature | Description |
+|---------|-------------|
+| BASELINE_SIMILARITY | Distance to normal business language |
+| MNPI_RISK_SCORE | Similarity to insider trading language |
+| CONFIDENTIALITY_RISK_SCORE | Similarity to data leak language |
+| PERSONAL_TRADING_RISK_SCORE | Similarity to personal trading language |
+| INFO_BARRIER_RISK_SCORE | Similarity to wall-crossing language |
+| CROSS_BARRIER_FLAG | Research↔Trading department indicator |
+
+This captures **meaning, not keywords** - violators can change vocabulary but meaning still clusters near risk concepts.
+
+---
+
+## Three-Way Classification
+
+The ML model outputs probability scores that drive a three-way decision:
+
+| ML Decision | Threshold | Action |
+|-------------|-----------|--------|
+| **HIGH_RISK** | probability >= 0.7 | Auto-flag for review |
+| **NEEDS_REVIEW** | 0.3 < probability < 0.7 | Send to LLM for analysis |
+| **LOW_RISK** | probability <= 0.3 | Auto-clear |
+
+This tiered approach means the LLM only processes ~21% of emails (the uncertain middle), dramatically reducing cost while improving recall.
+
+---
+
+## Snowflake Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| **Cortex Embeddings** | EMBED_TEXT_768 with Arctic Embed M |
+| **VECTOR type** | Native 768-dim vector storage |
+| **VECTOR_COSINE_SIMILARITY** | Semantic similarity calculation |
+| **Feature Store** | Versioned, auto-refreshing features |
+| **Model Registry** | Versioned ML model deployment |
+| **XGBClassifier** | Gradient boosting classification |
+| **CORTEX.COMPLETE** | LLM inference (Claude) |
+| **CORTEX.FINETUNE** | Custom model training |
+| **Cortex Search Service** | Self-maintaining semantic search |
+
+---
+
+## Cleanup
+
+After the demo, remove all objects:
+
+```sql
+DROP DATABASE IF EXISTS COMPLIANCE_DEMO CASCADE;
+DROP WAREHOUSE IF EXISTS COMPLIANCE_DEMO_WH;
+```
+
+---
+
+## Notes
+
+- **Data generation:** Uses Cortex LLM batch SQL for realistic, unique emails
+- **Semantic features:** Computing embeddings for 10K emails takes ~2-3 minutes
+- **Fine-tuning:** The FINETUNE job is async and takes 30-60 minutes
+- **Cortex Search:** Service indexing may take a few minutes after creation
 
 ---
 
 ## License
 
-Internal demo use only. All data is synthetic.
+Internal demo - not for distribution.
