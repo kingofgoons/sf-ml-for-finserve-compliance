@@ -35,3 +35,6 @@ Thumbs.db
 
 # References (local only)
 references/
+
+# AI assistant rules (local only)
+AGENTS.md
